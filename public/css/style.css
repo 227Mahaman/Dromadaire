@@ -228,7 +228,8 @@ ul, ol {
 	box-shadow: 0 0 15px 5px rgba(44, 44, 44, 0.2);
 }
 .top-nav {
-	background: #1c1c1c;
+	/*background: #1c1c1c;*/
+	background: orange;
 }
 .top-nav .main-menu ul li {
 	list-style: none;
@@ -343,7 +344,7 @@ ul, ol {
 	text-align: center;
 	border: 2px solid #D5F2F1;
 	line-height: 45px;
-	color: #2cbdb8;
+	color: #F7A713;
 	font-size: 20px;
 	margin-right: 14px;
 }

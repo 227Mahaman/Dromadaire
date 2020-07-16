@@ -138,7 +138,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="./index.html"><img src="public/img/logo/logook2.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-9">
@@ -179,7 +179,7 @@
     ?>
 
     <!-- Footer Section Begin -->
-    <footer class="footer-section set-bg" data-setbg="img/footer-bg.jpg">
+    <footer class="footer-section set-bg" data-setbg="public/img/footer-bg.jpg">
         <div class="container">
             <div class="footer-text">
                 <div class="row">
