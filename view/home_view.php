@@ -6,7 +6,7 @@ ob_start();
 <!-- Hero Section Begin -->
 <section class="hero-section">
         <div class="hero-items owl-carousel">
-            <div class="single-hero-item set-bg" data-setbg="public/img/hero/hero-1.jpg">
+            <div class="single-hero-item set-bg" data-setbg="public/img/banniere/6.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
@@ -40,7 +40,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <div class="single-hero-item set-bg" data-setbg="public/img/hero/hero-2.jpg">
+            <div class="single-hero-item set-bg" data-setbg="public/img/banniere/8.jpeg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
@@ -74,7 +74,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <div class="single-hero-item set-bg" data-setbg="public/img/hero/hero-3.jpg">
+            <div class="single-hero-item set-bg" data-setbg="public/img/banniere/3.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
@@ -112,13 +112,13 @@ ob_start();
         <div class="thumbnail-pic">
             <div class="thumbs owl-carousel">
                 <div class="item">
-                    <img src="public/img/hero/dot-1.jpg" alt="">
+                    <img src="public/img/banniere/6.jpg" alt="">
                 </div>
                 <div class="item">
-                    <img src="public/img/hero/dot-2.jpg" alt="">
+                    <img src="public/img/banniere/8.jpeg" alt="">
                 </div>
                 <div class="item">
-                    <img src="public/img/hero/dot-3.jpg" alt="">
+                    <img src="public/img/banniere/3.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -133,45 +133,40 @@ ob_start();
                     <div class="search-form-text">
                         <div class="search-text">
                             <i class="fa fa-search"></i>
-                            Find Your Home
+                            Accueil
                         </div>
                         <div class="home-text">
                             <i class="fa fa-home"></i>
-                            House For Sell
+                            Reservation
                         </div>
                     </div>
                     <form action="#" class="filter-form">
                         <div class="first-row">
                             <select>
-                                <option value="">Villa & Pool</option>
+                                <option value="">Destination</option>
                             </select>
                             <select>
-                                <option value="">Title</option>
+                                <option value="">Date</option>
                             </select>
                             <select>
-                                <option value="">Ani City</option>
+                                <option value="">Heure</option>
                             </select>
                             <select>
                                 <option value="">Any Bithrooms</option>
                             </select>
                         </div>
                         <div class="second-row">
-                            <select>
-                                <option value="">Any Bedrooms</option>
-                            </select>
-                            <div class="price-range-wrap">
-                                <div class="price-text">
-                                    <label for="priceRange">Price:</label>
-                                    <input type="text" id="priceRange" readonly>
-                                </div>
-                                <div id="price-range" class="slider"></div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="Nom">
                             </div>
-                            <div class="room-size-range">
-                                <div class="price-text">
-                                    <label for="roomsizeRange">Size:</label>
-                                    <input type="text" id="roomsizeRange" readonly>
-                                </div>
-                                <div id="roomsize-range" class="slider"></div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="Prénom">
+                            </div>
+                            <div class="form-group">
+                                <input type="mail" class="form-control" name="" placeholder="aaaaa@aaaa.com">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" name="" placeholder="(+227)00000000">
                             </div>
                             <button type="button" class="search-btn">Search</button>
                         </div>
