@@ -78,6 +78,8 @@ if (!empty($_GET['action'])) {
         include_once('view/destination_view.php');
     } elseif ($action == "agence") { //View Agence
         include_once('view/agence_view.php');
+    } elseif ($action == "contact") { //View Contact
+        include_once('view/contact_view.php');
     } elseif ($action == "forum") { //View Forum
         if (empty($_SESSION['equipe_candidat'])) {
             header("Location:index.php?action=home");
