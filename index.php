@@ -74,6 +74,8 @@ if (!empty($_GET['action'])) {
         include_once('view/reservation_view.php');
     } elseif ($action == "media") { //View Media
         include_once('view/media_view.php');
+    } elseif ($action == "destination") { //View Destination Tarif
+        include_once('view/destination_view.php');
     } elseif ($action == "forum") { //View Forum
         if (empty($_SESSION['equipe_candidat'])) {
             header("Location:index.php?action=home");
@@ -93,16 +95,6 @@ if (!empty($_GET['action'])) {
         //     $res = $manager->insert($data, "file_jointe");
         // }
         include_once('view/forum_view.php');
-    } elseif ($action == "presentation") { //View Présentation
-        include_once('view/presentation_view.php');
-    } elseif ($action == "reglement") { //View Règlement
-        include_once('view/reglement_view.php');
-    } elseif ($action == "contacter") { //View Contact
-        include_once('view/contacter_view.php');
-    } elseif ($action == "hackathon") { //View Hackathon
-        include_once('view/hackathon_view.php');
-    } elseif ($action == "projets") { //View Projets
-        include_once('view/projets_view.php');
     } elseif ($action == "login") { //View Contact
         if (!empty($_POST)) { 
             /* extract($_POST);

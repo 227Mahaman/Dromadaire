@@ -61,7 +61,7 @@
             <ul>
                 <li><a href="index.php?action=home">Accueil</a></li>
                 <li><a href="./property.html">Réservation</a></li>
-                <li><a href="./about-us.html">Nos Destination</a></li>
+                <li><a href="index.php?action=destination">Nos Destination</a></li>
                 <li><a href="./blog.html">Nos Agences/Gares</a></li>
                 <li><a href="./property-details.html">Espace Client</a></li>
                 <li><a href="index.php?action=media">Media</a></li>
@@ -106,7 +106,7 @@
                             <ul>
                                 <li class="active"><a href="index.php?action=home">Accueil</a></li>
                                 <li><a href="./property.html">Réservation</a></li>
-                                <li><a href="./about-us.html">Nos Destination</a></li>
+                                <li><a href="index.php?action=destination">Nos Destination</a></li>
                                 <li><a href="./blog.html">Nos Agences/Gares</a></li>
                                 <li><a href="./property-details.html">Espace Client</a></li>
                                 <li><a href="index.php?action=media">Media</a></li>
@@ -178,6 +178,41 @@
     <?php
     echo $content;
     ?>
+
+    <!-- Partner Carousel Section Begin -->
+    <div class="partner-section">
+        <div class="container">
+            <h2>Nos Partenaires</h2>
+            <div class="partner-carousel owl-carousel">
+                <a href="#" class="partner-logo">
+                    <div class="partner-logo-tablecell">
+                        <img src="public/img/partner/partner-1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="partner-logo">
+                    <div class="partner-logo-tablecell">
+                        <img src="public/img/partner/partner-2.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="partner-logo">
+                    <div class="partner-logo-tablecell">
+                        <img src="public/img/partner/partner-3.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="partner-logo">
+                    <div class="partner-logo-tablecell">
+                        <img src="public/img/partner/partner-4.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="partner-logo">
+                    <div class="partner-logo-tablecell">
+                        <img src="public/img/partner/partner-5.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Partner Carousel Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer-section set-bg" data-setbg="public/img/footer-bg.jpg">
