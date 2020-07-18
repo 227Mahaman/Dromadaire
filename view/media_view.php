@@ -193,6 +193,7 @@ ob_start();
     </div>
 </div>
 <!-- Partner Carousel Section End -->
+
 <?php
 $content = ob_get_clean();
 require("template.php");
