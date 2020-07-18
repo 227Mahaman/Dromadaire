@@ -389,7 +389,7 @@ ul, ol {
 	color: #aaaab3;
 }
 .single-hero-item .hero-text .room-location i {
-	color: #2cbdb8;
+	color: orange;
 }
 .single-hero-item .hero-text h2 {
 	font-size: 44px;
@@ -424,7 +424,7 @@ ul, ol {
 }
 .single-hero-item .hero-text .room-features li i {
 	font-size: 24px;
-	color: #2cbdb8;
+	color: orange;
 }
 .single-hero-item .hero-text .room-features li p {
 	font-size: 14px;
@@ -465,7 +465,7 @@ ul, ol {
 	font-size: 16px;
 	color: #ffffff;
 	text-transform: uppercase;
-	background: #2cbdb8;
+	background: orange;
 	padding: 13px 30px;
 	font-weight: 500;
 }
@@ -606,10 +606,10 @@ ul, ol {
 	width: 247px;
 	font-size: 16px;
 	height: 46px;
-	background: #2cbdb8;
+	background: orange;
 	color: #ffffff;
 	border: none;
-	border: 1px solid #2cbdb8;
+	border: 1px solid orange;
 	cursor: pointer;
 }
 .ui-widget.ui-widget-content {

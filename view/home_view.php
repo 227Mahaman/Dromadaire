@@ -11,28 +11,28 @@ ob_start();
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="hero-text">
-                                <p class="room-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</p>
-                                <h2>Villa 9721 Glen Creek</h2>
+                                <p class="room-location"><i class="icon_pin"></i> Avenue Mali Bero, Niamey-NIGER</p>
+                                <h2>Le plaisir de voyage</h2>
                                 <div class="room-price">
-                                    <span>Start Form:</span>
-                                    <p>$3.000.000</p>
+                                    <span>24H/24H --</span>
+                                    <p>7j/7j</p>
                                 </div>
                                 <ul class="room-features">
                                     <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
+                                        <i class="fa fa-home"></i>
+                                        <p>20 Agences</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
+                                        <i class="fa fa-user"></i>
+                                        <p> 500 employés</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
+                                        <i class="fa fa-bus"></i>
+                                        <p>120 Bus</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
+                                        <p>8 Garages</p>
                                     </li>
                                 </ul>
                             </div>
@@ -45,28 +45,28 @@ ob_start();
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="hero-text">
-                                <p class="room-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</p>
-                                <h2>Villa 9721 Glen Creek</h2>
+                                <p class="room-location"><i class="icon_pin"></i> Avenue Mali Bero, Niamey-NIGER</p>
+                                <h2>Le plaisir de voyage</h2>
                                 <div class="room-price">
-                                    <span>Start Form:</span>
-                                    <p>$3.000.000</p>
+                                    <span>24H/24H --</span>
+                                    <p>7j/7j</p>
                                 </div>
                                 <ul class="room-features">
                                     <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
+                                        <i class="fa fa-home"></i>
+                                        <p>20 Agences</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
+                                        <i class="fa fa-user"></i>
+                                        <p> 500 employés</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
+                                        <i class="fa fa-bus"></i>
+                                        <p>120 Bus</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
+                                        <p>8 Garages</p>
                                     </li>
                                 </ul>
                             </div>
@@ -79,28 +79,28 @@ ob_start();
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="hero-text">
-                                <p class="room-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</p>
-                                <h2>Villa 9721 Glen Creek</h2>
+                                <p class="room-location"><i class="icon_pin"></i> Avenue Mali Bero, Niamey-NIGER</p>
+                                <h2>Le plaisir de voyage</h2>
                                 <div class="room-price">
-                                    <span>Start Form:</span>
-                                    <p>$3.000.000</p>
+                                    <span>24H/24H --</span>
+                                    <p>7j/7j</p>
                                 </div>
                                 <ul class="room-features">
                                     <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
+                                        <i class="fa fa-home"></i>
+                                        <p>20 Agences</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
+                                        <i class="fa fa-user"></i>
+                                        <p> 500 employés</p>
                                     </li>
                                     <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
+                                        <i class="fa fa-bus"></i>
+                                        <p>120 Bus</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
+                                        <p>8 Garages</p>
                                     </li>
                                 </ul>
                             </div>
@@ -142,6 +142,9 @@ ob_start();
                     </div>
                     <form action="#" class="filter-form">
                         <div class="first-row">
+                        <select>
+                                <option value="">Départ</option>
+                            </select>
                             <select>
                                 <option value="">Destination</option>
                             </select>
@@ -152,7 +155,8 @@ ob_start();
                                 <option value="">Heure</option>
                             </select>
                             <select>
-                                <option value="">Any Bithrooms</option>
+                                <option value="">Express</option>
+                                <option value="">Climatisé</option>
                             </select>
                         </div>
                         <div class="second-row">
@@ -168,7 +172,7 @@ ob_start();
                             <div class="form-group">
                                 <input type="tel" class="form-control" name="" placeholder="(+227)00000000">
                             </div>
-                            <button type="button" class="search-btn">Search</button>
+                            <button type="button" class="search-btn">Réserver</button>
                         </div>
                     </form>
                 </div>
@@ -488,7 +492,7 @@ ob_start();
                     <div class="properties-title">
                         <div class="section-title">
                             <span>Top Property For You</span>
-                            <h2>Top Properties</h2>
+                            <h2>Nos Medias</h2>
                         </div>
                         <a href="#" class="top-property-all">View All Property</a>
                     </div>
@@ -501,7 +505,7 @@ ob_start();
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="stp-pic">
-                                <img src="public/img/properties/properties-1.jpg" alt="">
+                                <img src="public/img/medias/media-1.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -540,7 +544,124 @@ ob_start();
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="stp-pic">
-                                <img src="public/img/properties/properties-2.jpg" alt="">
+                                <img src="public/img/medias/media-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="stp-text">
+                                <div class="s-text">For Sale</div>
+                                <h2>Villa 9721 Glen Creek</h2>
+                                <div class="room-price">
+                                    <span>Start From:</span>
+                                    <h4>$3.000.000</h4>
+                                </div>
+                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <ul class="room-features">
+                                    <li>
+                                        <i class="fa fa-arrows"></i>
+                                        <p>5201 sqft</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <p>8 Bed Room</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bath"></i>
+                                        <p>7 Baths Bed</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-car"></i>
+                                        <p>1 Garage</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-top-properties">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="stp-pic">
+                                <img src="public/img/medias/media-3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="stp-text">
+                                <div class="s-text">For Sale</div>
+                                <h2>Villa 9721 Glen Creek</h2>
+                                <div class="room-price">
+                                    <span>Start From:</span>
+                                    <h4>$3.000.000</h4>
+                                </div>
+                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <ul class="room-features">
+                                    <li>
+                                        <i class="fa fa-arrows"></i>
+                                        <p>5201 sqft</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <p>8 Bed Room</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bath"></i>
+                                        <p>7 Baths Bed</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-car"></i>
+                                        <p>1 Garage</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-top-properties">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="stp-pic">
+                                <img src="public/img/medias/media-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="stp-text">
+                                <div class="s-text">For Sale</div>
+                                <h2>Villa 9721 Glen Creek</h2>
+                                <div class="room-price">
+                                    <span>Start From:</span>
+                                    <h4>$3.000.000</h4>
+                                </div>
+                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <ul class="room-features">
+                                    <li>
+                                        <i class="fa fa-arrows"></i>
+                                        <p>5201 sqft</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <p>8 Bed Room</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bath"></i>
+                                        <p>7 Baths Bed</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-car"></i>
+                                        <p>1 Garage</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-top-properties">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="stp-pic">
+                                <img src="public/img/medias/media-5.JPG" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -586,8 +707,8 @@ ob_start();
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>We Are To Help You</span>
-                        <h2>Our Agents</h2>
+                        <span>Le plaisir de voyage</span>
+                        <h2>Administration</h2>
                     </div>
                 </div>
             </div>
@@ -726,6 +847,7 @@ ob_start();
     <!-- Partner Carousel Section Begin -->
     <div class="partner-section">
         <div class="container">
+            <h2>Nos Partenaires</h2>
             <div class="partner-carousel owl-carousel">
                 <a href="#" class="partner-logo">
                     <div class="partner-logo-tablecell">

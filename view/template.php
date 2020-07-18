@@ -40,7 +40,7 @@
         <div class="canvas-close">
             <i class="icon_close"></i>
         </div>
-        <div class="language-bar">
+        <!--<div class="language-bar">
             <div class="language-option">
                 <img src="img/flag.png" alt="">
                 <span>English</span>
@@ -56,14 +56,15 @@
             <div class="property-btn">
                 <a href="#" class="property-sub">Submit Property</a>
             </div>
-        </div>
+        </div>-->
         <nav class="main-menu">
             <ul>
                 <li><a href="index.php?action=home">Accueil</a></li>
-                <li><a href="./property.html">Property</a></li>
-                <li><a href="./about-us.html">Agets</a></li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="./property-details.html">Pages</a></li>
+                <li><a href="./property.html">Réservation</a></li>
+                <li><a href="./about-us.html">Nos Destination</a></li>
+                <li><a href="./blog.html">Nos Agences/Gares</a></li>
+                <li><a href="./property-details.html">Espace Client</a></li>
+                <li><a href="./property-details.html">Media</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -73,7 +74,7 @@
                     <i class="icon_phone"></i>
                     <div class="info-text">
                         <span>Phone:</span>
-                        <p>(+12) 345 6789</p>
+                        <p>(+227) 89592626</p>
                     </div>
                 </li>
                 <li>
@@ -100,7 +101,7 @@
         <div class="top-nav">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         <nav class="main-menu">
                             <ul>
                                 <li class="active"><a href="index.php?action=home">Accueil</a></li>
@@ -113,7 +114,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-2">
+                    <!--<div class="col-lg-2">
                         <div class="top-right">
                             <div class="language-option">
                                 <img src="img/flag.png" alt="">
@@ -129,7 +130,7 @@
                             </div>
                             <a href="#" class="property-sub">Submit</a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -148,7 +149,7 @@
                                     <i class="icon_phone"></i>
                                     <div class="info-text">
                                         <span>Phone:</span>
-                                        <p>(+12) 345 6789</p>
+                                        <p>(+227) 89592626</p>
                                     </div>
                                 </li>
                                 <li>
@@ -186,28 +187,34 @@
                     <div class="col-lg-3">
                         <div class="footer-logo">
                             <div class="logo">
-                                <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                                <a href="#"><img src="public/img/logo/logook2.png" alt=""></a>
                             </div>
-                            <p>Subscribe our newsletter gor get notification about new updates.</p>
+                            <p>Pour recevoir des notifications nous concernant.</p>
                             <form action="#" class="newslatter-form">
-                                <input type="text" placeholder="Enter your email...">
+                                <input type="mail" placeholder="Enter your email...">
                                 <button type="submit"><i class="fa fa-location-arrow"></i></button>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="footer-widget">
-                            <h4>Property City</h4>
+                            <h4>Nos grandes villes</h4>
                             <ul>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Florida</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">New York</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Washington</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Los Angeles</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Agadez</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Dosso</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Diffa</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Maradi</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Tahaou</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Tillabéri</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Zinder</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Niamey</a></li>
                             </ul>
                             <ul>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">St Louis</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Jacksonville</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">San Jose</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Abidjan</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Bamako</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Cotonou</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Lomé</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Ouagadougou</a></li>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">San Diego</a></li>
                             </ul>
                         </div>
@@ -217,15 +224,13 @@
                             <h4>Social</h4>
                             <ul class="social">
                                 <li><i class="ti-facebook"></i> <a href="#">Facebook</a></li>
-                                <li><i class="ti-instagram"></i> <a href="#">Instagram</a></li>
                                 <li><i class="ti-twitter-alt"></i> <a href="#">Twitter</a></li>
-                                <li><i class="ti-google"></i> <a href="#">Google+</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="footer-widget">
-                            <h4>Contact Us</h4>
+                            <h4>Contactez Nous</h4>
                             <ul class="contact-option">
                                 <li><i class="fa fa-map-marker"></i> 16 Creek Ave. Farming, NY</li>
                                 <li><i class="fa fa-phone"></i> (+88) 666 121 4321</li>
@@ -238,7 +243,7 @@
             </div>
             <div class="copyright-text">
                 <p><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous les droits réservés à SONEF, développé<i class="ti-heart" aria-hidden="true"></i> par <a href="https://colorlib.com" target="_blank">Ely Consulting</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p>
             </div>
         </div>
