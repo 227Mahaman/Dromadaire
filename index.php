@@ -71,9 +71,9 @@ if (!empty($_GET['action'])) {
         //         }
         //     }
         // }
-        include_once('view/inscription_view.php');
-    } elseif ($action == "etape") { //View Etape
-        include_once('view/etape_view.php');
+        include_once('view/reservation_view.php');
+    } elseif ($action == "media") { //View Media
+        include_once('view/media_view.php');
     } elseif ($action == "forum") { //View Forum
         if (empty($_SESSION['equipe_candidat'])) {
             header("Location:index.php?action=home");

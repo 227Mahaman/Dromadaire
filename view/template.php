@@ -64,7 +64,7 @@
                 <li><a href="./about-us.html">Nos Destination</a></li>
                 <li><a href="./blog.html">Nos Agences/Gares</a></li>
                 <li><a href="./property-details.html">Espace Client</a></li>
-                <li><a href="./property-details.html">Media</a></li>
+                <li><a href="index.php?action=media">Media</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -109,7 +109,7 @@
                                 <li><a href="./about-us.html">Nos Destination</a></li>
                                 <li><a href="./blog.html">Nos Agences/Gares</a></li>
                                 <li><a href="./property-details.html">Espace Client</a></li>
-                                <li><a href="./property-details.html">Media</a></li>
+                                <li><a href="index.php?action=media">Media</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
