@@ -1,3 +1,11 @@
+<?php
+if (!empty($_POST)) {
+    $data = $_POST;
+    $manager  = new Manager();
+    $res = $manager->insert($data, "news");
+    //Manager::showError($res);
+}
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -225,8 +233,8 @@
                                 <a href="#"><img src="public/img/logo/logook2.png" alt=""></a>
                             </div>
                             <p>Pour recevoir des notifications nous concernant.</p>
-                            <form action="#" class="newslatter-form">
-                                <input type="mail" placeholder="Enter your email...">
+                            <form method="post" class="newslatter-form">
+                                <input type="mail" name="mail" placeholder="Renseignez votre email...">
                                 <button type="submit"><i class="fa fa-location-arrow"></i></button>
                             </form>
                         </div>
@@ -259,7 +267,7 @@
                             <h4>Social</h4>
                             <ul class="social">
                                 <li><i class="ti-facebook"></i> <a href="#">Facebook</a></li>
-                                <li><i class="ti-twitter-alt"></i> <a href="#">Twitter</a></li>
+                                <li><i class="ti-twitter-alt"></i> <a href="https://twitter.com/sonefstv?lang=fr">Twitter</a></li>
                             </ul>
                         </div>
                     </div>

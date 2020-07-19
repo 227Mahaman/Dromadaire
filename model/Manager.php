@@ -343,48 +343,90 @@ class Manager
         return false;
     }
 
-    public  function insert($object)
+    public  function insert($table, $table_name)
     {
-        $table = get_object_vars($object);
-        $table_name = strtolower(get_class($object));
-        $table = $table[$table_name];
-    //    var_dump($table); die($table_name);
-        if (is_array($table) || is_object($table)) {
-            if (count($table) > 0) {
-                end($table);
-                $last = key($table);
-                $sql = "INSERT INTO $table_name(";
-                foreach ($table as $key => $field) {
-                    if ($last != $key) {
-                        $sql .= $key . ", ";
-                    } else {
-                        $sql .= $key . ") ";
-                    }
+        // var_dump($table); die($table_name);
+        if (count($table) > 0) {
+            end($table);
+            $last = key($table);
+            $sql = "INSERT INTO $table_name(";
+            foreach ($table as $key => $field) {
+                if ($last != $key) {
+                    $sql .= $key . ", ";
+                } else {
+                    $sql .= $key . ") ";
                 }
-                $sql .= "VALUES(";
-                foreach ($table as $key => $field) {
-                    if ($last != $key) {
-                        $sql .= ":$key, ";
-                    } else {
-                        $sql .= ":$key)";
-                    }
+            }
+            $sql .= "VALUES(";
+            foreach ($table as $key => $field) {
+                if ($last != $key) {
+                    $sql .= ":$key, ";
+                } else {
+                    $sql .= ":$key)";
                 }
-    
-                $req = self::bdd()->prepare($sql);
-                //if ($this->is_not_empty($table)) {
+            }
+
+            $req = self::bdd()->prepare($sql);
+            if ($this->bindValue($table, $req)) {
+                if ($this->is_not_empty($table)) {
                     try {
-                        $req->execute($table);
+                        $req->execute();
                         $lastId = self::bdd()->lastInsertId();
                         return $this->throwError(1, "Enregistrement effectué avec succès", false, $lastId);
                     } catch (PDOException $e) {
                         return $this->throwError(0, "Enregistrement échoué; $e", true);
                     }
-                // } else {
-                //     return $this->throwError(0, "Un ou plusieurs champs mal renseigner", true);
-                // }
+                } else {
+                    return $this->throwError(0, "Un ou plusieurs champs mal renseigner", true);
+                }
+            } else {
+                $this->throwError(404, "Une erreur s'est produite ou enregistrement non trouvé", true);
             }
         }
     }
+
+    // public  function insert($object)
+    // {
+    //     $table = get_object_vars($object);
+    //     $table_name = strtolower(get_class($object));
+    //     $table = $table[$table_name];
+    // //    var_dump($table); die($table_name);
+    //     if (is_array($table) || is_object($table)) {
+    //         if (count($table) > 0) {
+    //             end($table);
+    //             $last = key($table);
+    //             $sql = "INSERT INTO $table_name(";
+    //             foreach ($table as $key => $field) {
+    //                 if ($last != $key) {
+    //                     $sql .= $key . ", ";
+    //                 } else {
+    //                     $sql .= $key . ") ";
+    //                 }
+    //             }
+    //             $sql .= "VALUES(";
+    //             foreach ($table as $key => $field) {
+    //                 if ($last != $key) {
+    //                     $sql .= ":$key, ";
+    //                 } else {
+    //                     $sql .= ":$key)";
+    //                 }
+    //             }
+    
+    //             $req = self::bdd()->prepare($sql);
+    //             //if ($this->is_not_empty($table)) {
+    //                 try {
+    //                     $req->execute($table);
+    //                     $lastId = self::bdd()->lastInsertId();
+    //                     return $this->throwError(1, "Enregistrement effectué avec succès", false, $lastId);
+    //                 } catch (PDOException $e) {
+    //                     return $this->throwError(0, "Enregistrement échoué; $e", true);
+    //                 }
+    //             // } else {
+    //             //     return $this->throwError(0, "Un ou plusieurs champs mal renseigner", true);
+    //             // }
+    //         }
+    //     }
+    // }
 
     public  function insertF($object)
     {
@@ -609,42 +651,6 @@ class Manager
         
     }
 
-    public static function CountVille(){
-        $query = "SELECT region.id_region, region.nom_region,
-            (SELECT COUNT(projet.id_projet) FROM projet, equipe WHERE equipe.region=region.id_region and equipe.id_equipe=projet.equipe) as nombre
-            FROM region
-        ";
-            $req = self::bdd()->query($query);
-            if (self::$results['data'] = $req->fetch(PDO::FETCH_ASSOC)) {
-                return self::$results;
-            }
-    }
-
-    public static function CountEquipe(){
-        $query = "SELECT COUNT(id_equipe) as total FROM equipe e, projet p WHERE e.id_equipe = p.equipe";
-            $req = self::bdd()->query($query);
-            if (self::$results['data'] = $req->fetch(PDO::FETCH_ASSOC)) {
-                return self::$results;
-            }
-    }
-
-    public static function CountCandidat(){
-        $query = "SELECT COUNT(id_candidat) as total FROM candidat c, equipe e, projet p 
-        WHERE e.id_equipe = p.equipe AND c.equipe = e.id_equipe";
-            $req = self::bdd()->query($query);
-            if (self::$results['data'] = $req->fetch(PDO::FETCH_ASSOC)) {
-                return self::$results['data'];
-            }
-        }
-    public static function CountEquipeByCoach($coach, $val){
-        $query = "SELECT COUNT(id_equipe) as total FROM equipe WHERE $coach=:$coach";
-            $req = self::bdd()->prepare($query);
-            $req->execute([$coach => $val]);
-            if (self::$results['data'] = $req->fetch(PDO::FETCH_ASSOC)) {
-                return self::$results;
-            }
-    }
-
     public static function updateDataSingle($proprety, $value, $table, $property, $val)
     {
         $sql = "UPDATE $table SET $proprety=:$proprety WHERE $property=:$property";
@@ -655,4 +661,41 @@ class Manager
             self::throwError(503, "modification échouée", true);
         }
     }
+
+    private static function bindValue($data, $req)
+    {
+        $data = self::slashValue($data);
+        if (is_array($data)) {
+            if ($data != false) {
+                foreach ($data as $key => $value) {
+                    if (is_int($value)) {
+                        $req->bindValue(":$key", $value, PDO::PARAM_INT);
+                    } elseif (is_string($value)) {
+                        $req->bindValue(":$key", $value, PDO::PARAM_STR);
+                    } elseif (is_bool($value)) {
+                        $req->bindValue(":$key", $value, PDO::PARAM_BOOL);
+                    }
+                }
+            }else {
+                return $data;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private function slashValue($data)
+    {
+        $data_is_slash = array();
+        if (is_array($data)) {
+            foreach ($data as $key => $value) {
+                $data_is_slash[$key] = trim(htmlspecialchars(addslashes($value)));
+            }
+            return $data_is_slash;
+        }else {
+            return false;
+        }
+    }
+
 }
