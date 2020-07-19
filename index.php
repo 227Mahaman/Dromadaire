@@ -1,16 +1,7 @@
 <?php
 
-//require "model/Manager.php";
+require "model/Manager.php";
 session_start();
-
-// $d = strtotime("now");
-// 		$manager = new Manager();
-// 		$data['message'] = "ok";
-// 		$data['candidat'] = 21;
-// 		$data['receiver'] = 37;
-// 		$data['date'] = date("Y-m-d h:i:s", $d);
-// 		$res = $manager->insert($data, "forum");
-// 		print_r($res); die;
 if (!empty($_GET['action'])) {
     extract($_GET);
     if ($action == "home") {

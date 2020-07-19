@@ -80,8 +80,8 @@
                 <li>
                     <i class="icon_map"></i>
                     <div class="info-text">
-                        <span>Address:</span>
-                        <p>16 Creek Ave, <span>NY</span></p>
+                        <span>Adresse:</span>
+                        <p>BP 11576 <span>Niamey</span></p>
                     </div>
                 </li>
                 <li>
@@ -155,8 +155,8 @@
                                 <li>
                                     <i class="icon_map"></i>
                                     <div class="info-text">
-                                        <span>Address:</span>
-                                        <p>16 Creek Ave, <span>NY</span></p>
+                                        <span>Adresse:</span>
+                                        <p>BP 11576 <span>Niamey</span></p>
                                     </div>
                                 </li>
                                 <li>
@@ -267,18 +267,28 @@
                         <div class="footer-widget">
                             <h4>Contactez Nous</h4>
                             <ul class="contact-option">
-                                <li><i class="fa fa-map-marker"></i> 16 Creek Ave. Farming, NY</li>
-                                <li><i class="fa fa-phone"></i> (+88) 666 121 4321</li>
+                                <li><i class="fa fa-map-marker"></i> Boulevard Mali Béro 11576,Niamey</li>
+                                <li><i class="fa fa-phone"></i> (+227) 89 59 26 26</li>
                                 <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
                                 <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li>
                             </ul>
                         </div>
                     </div>
+                    <br> <br>
+                <div class="col-md-6 col-12">
+                    <a class="twitter-timeline" data-height="400" href="https://twitter.com/sonefstv?lang=fr">Tweets by Sonef</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="fb-page" data-href="https://web.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://web.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://web.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
+                    </div>
+                </div>
                 </div>
             </div>
             <div class="copyright-text">
                 <p><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous les droits réservés à SONEF, développé<i class="ti-heart" aria-hidden="true"></i> par <a href="https://colorlib.com" target="_blank">Ely Consulting</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous les droits réservés à SONEF, développé<i class="ti-heart" aria-hidden="true"></i> par <a href="www.elyconsulting.net" target="_blank">Ely Consulting</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p>
             </div>
         </div>

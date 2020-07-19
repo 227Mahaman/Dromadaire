@@ -1,5 +1,5 @@
 <?php
-class Manager extends Managers
+class Manager
 {
 
     protected $last_name;
