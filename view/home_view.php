@@ -501,23 +501,35 @@ ob_start();
         </div>
         <div class="container">
             <div class="top-properties-carousel owl-carousel">
+            <?php
+            $target = '';
+            if ($_SERVER["SERVER_NAME"] == 'localhost') {
+                $target = "http://localhost/dromadaire/";
+            } else {
+                $target = "http://coronackathon.org/admin/";
+            }
+            $data = Manager::getData("post", true)['data'];
+            // die(var_dump($data));
+            if (is_array($data) || is_object($data)) {
+                foreach ($data as $value) {
+                ?>
                 <div class="single-top-properties">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="stp-pic">
-                                <img src="public/img/medias/media-1.png" alt="">
+                                <img src="<?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="<?= $value['intitule_post']?>">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="stp-text">
                                 <div class="s-text">For Sale</div>
-                                <h2>Villa 9721 Glen Creek</h2>
+                                <h2><?= $value['intitule_post']?></h2>
                                 <div class="room-price">
-                                    <span>Start From:</span>
-                                    <h4>$3.000.000</h4>
+                                    <span>Thème:</span>
+                                    <h4><?= $value['theme']?></h4>
                                 </div>
                                 <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p><?= $value['description']?></p>
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-arrows"></i>
@@ -540,162 +552,9 @@ ob_start();
                         </div>
                     </div>
                 </div>
-                <div class="single-top-properties">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="stp-pic">
-                                <img src="public/img/medias/media-2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="stp-text">
-                                <div class="s-text">For Sale</div>
-                                <h2>Villa 9721 Glen Creek</h2>
-                                <div class="room-price">
-                                    <span>Start From:</span>
-                                    <h4>$3.000.000</h4>
-                                </div>
-                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <ul class="room-features">
-                                    <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-top-properties">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="stp-pic">
-                                <img src="public/img/medias/media-3.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="stp-text">
-                                <div class="s-text">For Sale</div>
-                                <h2>Villa 9721 Glen Creek</h2>
-                                <div class="room-price">
-                                    <span>Start From:</span>
-                                    <h4>$3.000.000</h4>
-                                </div>
-                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <ul class="room-features">
-                                    <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-top-properties">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="stp-pic">
-                                <img src="public/img/medias/media-4.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="stp-text">
-                                <div class="s-text">For Sale</div>
-                                <h2>Villa 9721 Glen Creek</h2>
-                                <div class="room-price">
-                                    <span>Start From:</span>
-                                    <h4>$3.000.000</h4>
-                                </div>
-                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <ul class="room-features">
-                                    <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-top-properties">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="stp-pic">
-                                <img src="public/img/medias/media-5.JPG" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="stp-text">
-                                <div class="s-text">For Sale</div>
-                                <h2>Villa 9721 Glen Creek</h2>
-                                <div class="room-price">
-                                    <span>Start From:</span>
-                                    <h4>$3.000.000</h4>
-                                </div>
-                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <ul class="room-features">
-                                    <li>
-                                        <i class="fa fa-arrows"></i>
-                                        <p>5201 sqft</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        <p>8 Bed Room</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        <p>7 Baths Bed</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-car"></i>
-                                        <p>1 Garage</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php 
+                }
+            } ?>
             </div>
         </div>
     </div>
