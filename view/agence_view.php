@@ -30,7 +30,7 @@ ob_start();
     <section class="property-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <!--<div class="col-lg-3">
                     <div class="property-sidebar">
                         <h4>Search Property</h4>
                         <form action="#" class="sidebar-search">
@@ -109,28 +109,40 @@ ob_start();
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-9">
-                    <h4 class="property-title">Property</h4>
+                </div>-->
+                <div class="col-lg-12">
+                    <h4 class="property-title">Nos Agences</h4>
                     <div class="property-list">
+                        <?php
+                        $target = '';
+                        if ($_SERVER["SERVER_NAME"] == 'localhost') {
+                            $target = "http://localhost/dromadaire/";
+                        } else {
+                            $target = "http://sonef.net/admin/";
+                        }
+                        $data = Manager::getData("agence", true)['data'];
+                        if (is_array($data) || is_object($data)) {
+                            foreach ($data as $value) {
+                                $ville = Manager::getData('ville', 'id_ville', $value['ville'])['data'];
+                                $pays = Manager::getData('pays', 'id_pays', $ville['pays'])['data'];
+                            ?>
                         <div class="single-property-item">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="property-pic">
-                                        <img src="public/img/properties/property-1.jpg" alt="">
+                                        <img src="<?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="property-text">
                                         <div class="s-text">For Sale</div>
-                                        <h5 class="r-title">Villa 9721 Glen Creek</h5>
-                                        <div class="room-price">
+                                        <h5 class="r-title"><?= $value['nom_agence']?></h5>
+                                        <!--<div class="room-price">
                                             <span>Start From:</span>
                                             <h5>$3.000.000</h5>
-                                        </div>
-                                        <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave.
-                                            Ballston Spa, NY</div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        </div>-->
+                                        <div class="properties-location"><i class="icon_pin"></i> <?= $ville['intitule'] . ', ' .$pays['nom']?></div>
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                             incididunt ut labore.</p>
                                         <ul class="room-features">
                                             <li>
@@ -149,12 +161,15 @@ ob_start();
                                                 <i class="fa fa-car"></i>
                                                 <p>1 Garage</p>
                                             </li>
-                                        </ul>
+                                        </ul>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-property-item">
+                            <?php } 
+                        }?>
+                        </tbody>
+                        <!--<div class="single-property-item">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="property-pic">
@@ -276,7 +291,7 @@ ob_start();
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="property-pagination">
                         <a href="#">1</a>
