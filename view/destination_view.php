@@ -18,9 +18,9 @@ ob_start();
                     </div>
                     <div class="property-more-pic">
                         <div class="product-pic-zoom">
-                            <img class="product-big-img" src="public/img/properties/property-details-b1.jpg" alt="">
+                            <img class="product-big-img" src="public/img/medias/media-16.jpg" alt="">
                         </div>
-                        <div class="product-thumbs">
+                        <!--<div class="product-thumbs">
                             <div class="product-thumbs-track ps-slider owl-carousel">
                                 <div class="pt" data-imgbigurl="public/img/properties/property-details-b2.jpg"><img
                                         src="public/img/properties/thumb-1.jpg" alt=""></div>
@@ -33,16 +33,11 @@ ob_start();
                                 <div class="pt" data-imgbigurl="public/img/properties/property-details-b5.jpg"><img
                                         src="public/img/properties/thumb-5.jpg" alt=""></div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="pd-desc">
-                        <h4>Description</h4>
-                        <p>Learn how to improve your playing quality and even overall understanding of online gaming
-                            and how you perform while playing online. Gaming online is a huge business nowadays and
-                            that means that there are millions of people worldwide at online game sites all the
-                            time. Many are people just like you and me that like to play online and have fun doing
-                            it. Some of these people enjoy it so much, that they often do not even care about
-                            improving their skill and raising their chances of winning.</p>
+                        <h4>Destination et Tarif</h4>
+                        <p>Le plaisir de voyage</p>
                     </div>
                     <div class="pd-details-tab">
                         <div class="tab-item">
@@ -64,11 +59,17 @@ ob_start();
                                     <div class="property-more-table">
                                         <table class="left-table">
                                             <tbody>
+                                                <?php
+                                                $data = Manager::getData("tarif", true)['data'];
+                                                // die(var_dump($data));
+                                                if (is_array($data) || is_object($data)) {
+                                                    foreach ($data as $value) {
+                                                    ?>
                                                 <tr>
-                                                    <td class="pt-name">Price</td>
-                                                    <td class="p-value">$ 138,000</td>
+                                                    <td class="pt-name"><?= $value['code_tarif']?></td>
+                                                    <td class="p-value"><?= $value['valeur']?></td>
                                                 </tr>
-                                                <tr>
+                                                <!--<tr>
                                                     <td class="pt-name">Property Type</td>
                                                     <td class="p-value">Villa</td>
                                                 </tr>
@@ -91,11 +92,13 @@ ob_start();
                                                 <tr>
                                                     <td class="pt-name">Lot area</td>
                                                     <td class="p-value">200 spft</td>
-                                                </tr>
+                                                </tr>-->
+                                                <?php } 
+                                            }?>
                                             </tbody>
                                         </table>
                                         <table class="right-table">
-                                            <tbody>
+                                            <!--<tbody>
                                                 <tr>
                                                     <td class="pt-name">Agent</td>
                                                     <td class="p-value">Adam Smith</td>
@@ -124,7 +127,7 @@ ob_start();
                                                     <td class="pt-name">Gara Size</td>
                                                     <td class="p-value">200 sqft</td>
                                                 </tr>
-                                            </tbody>
+                                            </tbody>-->
                                         </table>
                                     </div>
                                 </div>
