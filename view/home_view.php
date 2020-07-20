@@ -506,7 +506,7 @@ ob_start();
             if ($_SERVER["SERVER_NAME"] == 'localhost') {
                 $target = "http://localhost/dromadaire/";
             } else {
-                $target = "http://coronackathon.org/admin/";
+                $target = "http://sonef.net/admin/";
             }
             $data = Manager::getData("post", true)['data'];
             // die(var_dump($data));
