@@ -188,7 +188,7 @@ if (!empty($_POST)) {
     ?>
 
     <!-- Partner Carousel Section Begin -->
-    <div class="partner-section">
+    <!--<div class="partner-section">
         <div class="container">
             <h2>Nos Partenaires</h2>
             <div class="partner-carousel owl-carousel">
@@ -219,7 +219,7 @@ if (!empty($_POST)) {
                 </a>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Partner Carousel Section End -->
 
     <!-- Footer Section Begin -->
