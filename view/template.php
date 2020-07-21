@@ -288,8 +288,8 @@ if (!empty($_POST)) {
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="fb-page" data-href="https://web.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://web.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://web.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
+                    <div class="fb-page" data-href="https://www.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
                     </div>
                 </div>
                 </div>
