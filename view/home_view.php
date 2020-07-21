@@ -182,7 +182,7 @@ ob_start();
     <!-- Search Form Section End -->
 
     <!-- How It Works Section Begin -->
-    <section class="howit-works spad">
+    <!--<section class="howit-works spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -216,7 +216,7 @@ ob_start();
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- How It Works Section End -->
 
     <!-- Feature Section Begin -->
