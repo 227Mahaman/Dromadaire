@@ -5,63 +5,55 @@ session_start();
 if (!empty($_GET['action'])) {
     extract($_GET);
     if ($action == "home") {
+        if($_POST){
+            $data = $_POST;
+            //var_dump($data);
+            //die();
+            $reservation = array();
+            $reservation['date'] = $data['date'];
+            $reservation['heure'] = $data['heure'];
+            unset($data['date']);
+            unset($data['heure']);
+            $manager  = new Manager();
+            $res = $manager->insert($data, "billet");
+            $database = Manager::bdd();
+            $res['lastId'] = $database->lastInsertId();
+            if (!empty($res['lastId'])) {
+                $reservation['billet'] = $res['lastId'];
+            }
+            $res = $manager->insert($reservation, "reservation");
+            $res['lastId'] = $database->lastInsertId();
+            if($res['error'] == false){
+                header('Location: index.php?action=reservation&id=' . $res['lastId']);
+            }
+        }
         include_once('view/home_view.php');
-    } elseif ($action == "reservation") { //View Inscription
-        //data contient l'etat des inscriptions
-
-        // if (!empty($_POST) && !empty($_FILES)) { //Traitement Inscription Candidat
-        //     $data = $_POST;
-        //     $manager  = new Manager();
-        //     //Manager::showError($_FILES);
-        //     if (empty($_FILES['file']['name'])) {
-        //         $data['file'] = 67;
-        //     } else {
-
-        //         $data['file'] = $manager->uploadProfilePicture($_FILES['file']);
-        //     }
-        //     date_default_timezone_set("Africa/Niamey");
-        //     $d = strtotime("now");
-        //     $data['date_post'] = date("Y-m-d h:i:s", $d);
-        //     $res = $manager->insert($data, "projet");
-        //     //Manager::showError($res);
-        //     if ($res['error'] == false) {
-        //         $_SESSION['equipe'] = $res['lastId'];
-        //         include_once("model/mail.php");
-        //     } else {
-        //         //$message=$res['message'];
-        //         $message = "Echec de l'Inscription !";
-        //         $type = "alert-danger";
-        //     }
-        //     //Manager::showError($res);
-        // }
-        // if (!empty($_POST)) { //Inscription Coach
-        //     $data = $_POST;
-        //     //$email = Manager::getData("users",7)['data'];
-        //     $email = Manager::is_not_use("users", "email", $data['email']);
-        //     $phone = Manager::is_not_use("users", "phone_number", $data['phone_number']);
-        //     //var_dump($email);
-        //     //die();
-        //     if (!$email) {
-        //         $message = "Echec de l'Inscription ! Il se peut que l'adresse email soit déjà utilisé";
-        //         $type = "alert-danger";
-        //     } elseif (!$phone) {
-        //         $message = "Echec de l'Inscription ! Il se peut que votre N° de téléphone soit déjà utilisé";
-        //         $type = "alert-danger";
-        //     } else {
-
-        //         $manager  = new Manager();
-        //         $res = $manager->insert($data, "users");
-        //         //Manager::showError($res);
-
-        //         if ($res['error'] == false) {
-        //             $_SESSION['id'] = $res['lastId'];
-        //             include_once("model/mail.php");
-        //         } else {
-        //             $message = "Echec de votre inscription en tant que coach";
-        //             $type = "alert-danger";
-        //         }
-        //     }
-        // }
+    } elseif ($action == "reservation") { //View Reservation
+        if($_POST){
+            $data = $_POST;
+            $reservation = array();
+            $reservation['etat'] = $data['etat'];
+            $reservation['place'] = $data['place'];
+            $reservation['cout'] = $data['cout'];
+            unset($data['etat']);
+            unset($data['place']);
+            unset($data['cout']);
+            $manager  = new Manager();
+            $res = $manager->insert($data, "client");
+            $database = Manager::bdd();
+            $res['lastId'] = $database->lastInsertId();
+            if (!empty($res['lastId'])) {
+                $reservation['client'] = $res['lastId'];
+                Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
+            }
+            if($res['error'] == false){
+                header('Location: index.php?action=reservation&c=' . $res['lastId']);
+            }
+            
+            $res = $manager->insert($reservation, "reservation");
+            $res['lastId'] = $database->lastInsertId();
+            
+        }
         include_once('view/reservation_view.php');
     } elseif ($action == "media") { //View Media
         include_once('view/media_view.php');

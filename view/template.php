@@ -68,7 +68,7 @@ if (!empty($_POST)) {
         <nav class="main-menu">
             <ul>
                 <li><a href="index.php?action=home">Accueil</a></li>
-                <li><a href="#">Réservation</a></li>
+                <li><a href="index.php?action=home#reservation">Réservation</a></li>
                 <li><a href="index.php?action=destination">Nos Destination</a></li>
                 <li><a href="index.php?action=agence">Nos Agences/Gares</a></li>
                 <li><a href="#">Espace Client</a></li>
@@ -113,7 +113,7 @@ if (!empty($_POST)) {
                         <nav class="main-menu">
                             <ul>
                                 <li class="active"><a href="index.php?action=home">Accueil</a></li>
-                                <li><a href="#">Réservation</a></li>
+                                <li><a href="index.php?action=home#reservation">Réservation</a></li>
                                 <li><a href="index.php?action=destination">Nos Destination</a></li>
                                 <li><a href="index.php?action=agence">Nos Agences/Gares</a></li>
                                 <li><a href="#">Espace Client</a></li>

@@ -3,8 +3,8 @@ $title = "Accueil";
 ob_start();
 ?>
 
-<!-- Hero Section Begin -->
-<section class="hero-section">
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
         <div class="hero-items owl-carousel">
             <div class="single-hero-item set-bg" data-setbg="public/img/banniere/6.jpg">
                 <div class="container">
@@ -126,7 +126,7 @@ ob_start();
     <!-- Hero Section End -->
 
     <!-- Search Form Section Begin -->
-    <div class="search-form">
+    <div id="reservation" class="search-form">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -140,27 +140,34 @@ ob_start();
                             Reservation
                         </div>
                     </div>
-                    <form action="#" class="filter-form">
+                    <form method="post" class="filter-form">
                         <div class="first-row">
-                        <select>
-                                <option value="">Départ</option>
+                            <select name="depart_destination" class="form-control col-lg-3">
+                            <option disabled>Ville de Départ et Destination</option>
+                            <?php
+                            $data = Manager::getData("tarif", true)['data'];
+                            // die(var_dump($data));
+                            if (is_array($data) || is_object($data)) {
+                                foreach ($data as $value) {
+                                ?>
+                                <option value="<?= $value['id_tarif']?>"><?= $value['code_tarif']?></option>
+                            <?php } }?>
                             </select>
-                            <select>
-                                <option value="">Destination</option>
+                            <select name="bus">
+                                <option disabled>Bus</option>
+                                <option value="0">Express</option>
+                                <option value="1">Climatisé</option>
                             </select>
-                            <select>
-                                <option value="">Date</option>
-                            </select>
-                            <select>
-                                <option value="">Heure</option>
-                            </select>
-                            <select>
-                                <option value="">Express</option>
-                                <option value="">Climatisé</option>
-                            </select>
+                            <br><br>
+                            <label>Date</label>
+                            <input type="date" class="form-control" name="date">
+                            
+                            <label>Heure</label>
+                            <input type="text" class="form-control" name="heure">
+                            <br>
                         </div>
                         <div class="second-row">
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <input type="text" class="form-control" name="" placeholder="Nom">
                             </div>
                             <div class="form-group">
@@ -171,8 +178,8 @@ ob_start();
                             </div>
                             <div class="form-group">
                                 <input type="tel" class="form-control" name="" placeholder="(+227)00000000">
-                            </div>
-                            <button type="button" class="search-btn">Réserver</button>
+                            </div>-->
+                            <button type="submit" class="search-btn">Réserver</button>
                         </div>
                     </form>
                 </div>
