@@ -481,6 +481,7 @@ ob_start();
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-text">
+                        <iframe src="https://youtu.be/jWp-x76WqeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <a href="https://youtu.be/jWp-x76WqeA" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         <h4></h4>
                         <h2></h2>
