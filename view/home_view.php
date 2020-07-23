@@ -220,7 +220,7 @@ ob_start();
     <!-- How It Works Section End -->
 
     <!-- Feature Section Begin -->
-    <section class="feature-section spad">
+    <!--<section class="feature-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -465,18 +465,18 @@ ob_start();
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Feature Section End -->
 
     <!-- Video Section Begin -->
-    <div class="video-section set-bg" data-setbg="public/img/video-bg.jpg">
+    <div class="video-section set-bg" data-setbg="https://youtu.be/jWp-x76WqeA">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-text">
-                        <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        <h4>Find The Perfect</h4>
-                        <h2>Real Estate Agent Near You</h2>
+                        <a href="https://youtu.be/jWp-x76WqeA" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <h4></h4>
+                        <h2></h2>
                     </div>
                 </div>
             </div>
@@ -506,7 +506,7 @@ ob_start();
             if ($_SERVER["SERVER_NAME"] == 'localhost') {
                 $target = "http://localhost/dromadaire/";
             } else {
-                $target = "http://sonef.net/admin/";
+                $target = "http://coronackathon.org/dromadaire/admin";
             }
             $data = Manager::getData("post", true)['data'];
             // die(var_dump($data));
@@ -645,7 +645,7 @@ ob_start();
     <!-- Agent Section End -->
 
     <!-- Latest Blog Section Begin -->
-    <section class="blog-section latest-blog spad">
+    <!--<section class="blog-section latest-blog spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -700,7 +700,7 @@ ob_start();
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Latest Blog Section End -->
 
 <?php
