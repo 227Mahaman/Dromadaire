@@ -1,5 +1,6 @@
 <?php
 $title = "Accueil";
+$agences = Manager::Count('agence', 'id_agence');
 ob_start();
 ?>
 
@@ -20,7 +21,7 @@ ob_start();
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <p>20 Agences</p>
+                                        <p><?= $agences['total']?> Agences</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-user"></i>
@@ -54,7 +55,7 @@ ob_start();
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <p>20 Agences</p>
+                                        <p><?= $agences['total']?> Agences</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-user"></i>
@@ -88,7 +89,7 @@ ob_start();
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <p>20 Agences</p>
+                                        <p><?= $agences['total']?> Agences</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-user"></i>
