@@ -3,7 +3,9 @@ $title = "Reservation de Billet";
 if (!empty($_GET['id'])){
   $datas = Manager::getData("reservation", "id_reservation", $_GET['id'])['data'];
   $billet = Manager::getData("billet", "id_billet", $datas['billet'])['data'];
-  $tarif = Manager::getData("tarif", "id_tarif", $billet['depart_destination'])['data'];
+  $sql = "SELECT * FROM tarif WHERE vdepart=? AND vdestination=?";
+    $data = Manager::getMultiplesRecords($sql, [$billet['depart'], $billet['destination']]);
+  //$tarif = Manager::getData("tarif", "id_tarif", $data['id_billet'])['data'];
 } elseif (!empty($_GET['c'])){
     $datas = Manager::getData("client", "id_client", $_GET['c'])['data'];
 } 
@@ -154,17 +156,21 @@ ob_start();
                     <form method="post" class="filter-form">
                         <div class="first-row">
                         <?php if(!empty($_GET['id'])){?>
-                            <h5> Tarif: <?= $tarif['valeur']?> FCFA</h5>
+                            <?php if (is_array($data) || is_object($data)) {
+                                foreach ($data as $value) {?>
+                                <h5> Tarif: <?= $value['valeur']?> FCFA</h5>
+                            
                             <br>
-                            <input type="text" class="form-control" name="nom" placeholder="Nom du client">
+                            <input type="text" class="form-control" name="nom" placeholder="Nom du client" required>
                             <br>
-                            <input type="text" class="form-control" name="prenom" placeholder="Prénom du client">
+                            <input type="text" class="form-control" name="prenom" placeholder="Prénom du client" required>
                             <br>
-                            <input type="tel" class="form-control" name="tel" placeholder="(+227)93939393">
+                            <input type="tel" class="form-control" name="tel" placeholder="(+227)93939393" required>
                             <br>
                             <input type="mail" class="form-control" name="email" placeholder="aaaaa@aaaa.com">
-                            <input type="hidden" class="form-control" name="place" value="<?= $tarif['valeur']?>">
-                            <input type="hidden" class="form-control" name="cout" value="<?= $tarif['valeur']?>">
+                            <input type="hidden" class="form-control" name="place" value="<?= $value['valeur']?>">
+                            <input type="hidden" class="form-control" name="cout" value="<?= $value['valeur']?>">
+                            <?php } }?>
                             
                             <br>
                             <?php }elseif(!empty($_GET['c'])){?>

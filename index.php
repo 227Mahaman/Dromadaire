@@ -5,7 +5,7 @@ session_start();
 if (!empty($_GET['action'])) {
     extract($_GET);
     if ($action == "home") {
-        if($_POST){
+        if($_POST){// View Etape 1 de la Reservation
             $data = $_POST;
             //var_dump($data);
             //die();
@@ -28,14 +28,14 @@ if (!empty($_GET['action'])) {
             }
         }
         include_once('view/home_view.php');
-    } elseif ($action == "reservation") { //View Reservation
+    } elseif ($action == "reservation") { //View Etape 2 de la Reservation
         if($_POST){
             $data = $_POST;
             $reservation = array();
-            $reservation['etat'] = $data['etat'];
+            //$reservation['etat'] = $data['etat'];
             $reservation['place'] = $data['place'];
             $reservation['cout'] = $data['cout'];
-            unset($data['etat']);
+            //unset($data['etat']);
             unset($data['place']);
             unset($data['cout']);
             $manager  = new Manager();

@@ -143,31 +143,46 @@ ob_start();
                     </div>
                     <form action="index.php?action=home" method="post" class="filter-form">
                         <div class="first-row">
-                            <select name="depart_destination" class="form-control col-lg-3">
-                            <option disabled>Ville de Départ et Destination</option>
-                            <?php
-                            $data = Manager::getData("tarif", true)['data'];
-                            // die(var_dump($data));
-                            if (is_array($data) || is_object($data)) {
-                                foreach ($data as $value) {
-                                ?>
-                                <option value="<?= $value['id_tarif']?>"><?= $value['code_tarif']?></option>
-                            <?php } }?>
+                            <select name="depart" class="form-control col-lg-3">
+                                <option disabled selected>Ville de Départ</option>
+                                <?php
+                                $data = Manager::getData("ville", true)['data'];
+                                // die(var_dump($data));
+                                if (is_array($data) || is_object($data)) {
+                                    foreach ($data as $value) {
+                                    ?>
+                                    <option value="<?= $value['id_ville']?>"><?= $value['intitule']?></option>
+                                <?php } }?>
+                            </select>
+                            <select name="destination" class="form-control col-lg-3">
+                                <option disabled selected>Ville de Destination</option>
+                                <?php
+                                $data = Manager::getData("ville", true)['data'];
+                                // die(var_dump($data));
+                                if (is_array($data) || is_object($data)) {
+                                    foreach ($data as $value) {
+                                    ?>
+                                    <option value="<?= $value['id_ville']?>"><?= $value['intitule']?></option>
+                                <?php } }?>
                             </select>
                             <select name="bus">
-                                <option disabled>Bus</option>
+                                <option disabled selected>Bus</option>
                                 <option value="0">Express</option>
                                 <option value="1">Climatisé</option>
                             </select>
-                            <br><br>
-                            <label>Date</label>
-                            <input type="date" class="form-control" name="date">
-                            
-                            <label>Heure</label>
-                            <input type="text" class="form-control" name="heure">
-                            <br>
+                            <select name="heure">
+                                <option disabled selected>Heure</option>
+                                <option value="05H">05H</option>
+                                <option value="06H">O6H</option>
+                                <option value="07H">07H</option>
+                                <option value="08H">O8H</option>
+                            </select>
+                            <br><br><br><br>
                         </div>
                         <div class="second-row">
+                        <label>Date</label>
+                        <input type="date" class="form-control" name="date">
+                        <br>
                             <!--<div class="form-group">
                                 <input type="text" class="form-control" name="" placeholder="Nom">
                             </div>
@@ -180,7 +195,7 @@ ob_start();
                             <div class="form-group">
                                 <input type="tel" class="form-control" name="" placeholder="(+227)00000000">
                             </div>-->
-                            <button type="submit" class="search-btn">Réserver</button>
+                            <button type="submit" class="search-btn">Suivant</button>
                         </div>
                     </form>
                 </div>
