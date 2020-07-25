@@ -602,7 +602,7 @@ ob_start();
                     if ($_SERVER["SERVER_NAME"] == 'localhost') {
                         $target = "http://localhost/dromadaire/";
                     } else {
-                        $target = "http://coronackathon.org/droma_admin";
+                        $target = "http://coronackathon.org/droma_admin/";
                     }
                     $data = Manager::getData("agence", true)['data'];
                     //die(var_dump($data));
