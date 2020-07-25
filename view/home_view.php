@@ -552,7 +552,7 @@ ob_start();
                                     <span>Thème:</span>
                                     <h4><?= $value['theme']?></h4>
                                 </div>
-                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
+                                <!--<div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>-->
                                 <p><?= $value['description']?></p>
                                 <!--<ul class="room-features">
                                     <li>
@@ -597,20 +597,33 @@ ob_start();
             </div>
             <div class="row">
                 <div class="agent-carousel owl-carousel">
+                    <?php
+                    $target = '';
+                    if ($_SERVER["SERVER_NAME"] == 'localhost') {
+                        $target = "http://localhost/dromadaire/";
+                    } else {
+                        $target = "http://coronackathon.org/droma_admin";
+                    }
+                    $data = Manager::getData("agence", true)['data'];
+                    //die(var_dump($data));
+                    if (is_array($data) || is_object($data)) {
+                        foreach ($data as $value) {
+                            $ville = Manager::getData('ville', 'id_ville', $value['ville'])['data']['intitule'];
+                        ?>
                     <div class="col-lg-3">
                         <div class="single-agent">
                             <div class="sa-pic">
-                                <img src="public/img/agent/agent-1.jpg" alt="">
+                                <img src="<?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="<?= $value['nom_agence']?>">
                                 <div class="hover-social">
                                     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
                                     <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
                                     <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
                                 </div>
                             </div>
-                            <h5>Matthew Robbins <span>Founder & Ceo</span></h5>
+                            <h5><?= $value['nom_agence']?><span><?= $ville;?></span></h5>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <!--<div class="col-lg-3">
                         <div class="single-agent">
                             <div class="sa-pic">
                                 <img src="public/img/agent/agent-2.jpg" alt="">
@@ -661,7 +674,10 @@ ob_start();
                             </div>
                             <h5>Clifford Colon <span>Saler Manager</span></h5>
                         </div>
-                    </div>
+                    </div>-->
+                    <?php 
+                        }
+                    } ?>
                 </div>
             </div>
         </div>
