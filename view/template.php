@@ -96,7 +96,7 @@ if (!empty($_POST)) {
                     <i class="icon_mail"></i>
                     <div class="info-text">
                         <span>Email:</span>
-                        <p>Info.cololib@gmail.com</p>
+                        <p>contact@sonef.net</p>
                     </div>
                 </li>
             </ul>
@@ -171,7 +171,7 @@ if (!empty($_POST)) {
                                     <i class="icon_mail"></i>
                                     <div class="info-text">
                                         <span>Email:</span>
-                                        <p>Info.cololib@gmail.com</p>
+                                        <p>contact@sonef.net</p>
                                     </div>
                                 </li>
                             </ul>
@@ -279,7 +279,7 @@ if (!empty($_POST)) {
                             <ul class="contact-option">
                                 <li><i class="fa fa-map-marker"></i> Boulevard Mali Béro 11576,Niamey</li>
                                 <li><i class="fa fa-phone"></i> (+227) 89 59 26 26</li>
-                                <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                                <li><i class="fa fa-envelope"></i> contact@sonef.net</li>
                                 <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li>
                             </ul>
                         </div>
