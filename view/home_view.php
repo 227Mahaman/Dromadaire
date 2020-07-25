@@ -1,5 +1,6 @@
 <?php
 $title = "Accueil";
+$agences = Manager::Count('agence', 'id_agence');
 ob_start();
 ?>
 
@@ -20,7 +21,7 @@ ob_start();
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <p>20 Agences</p>
+                                        <p><?= $agences['total']?> Agences</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-user"></i>
@@ -54,7 +55,7 @@ ob_start();
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <p>20 Agences</p>
+                                        <p><?= $agences['total']?> Agences</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-user"></i>
@@ -88,7 +89,7 @@ ob_start();
                                 <ul class="room-features">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <p>20 Agences</p>
+                                        <p><?= $agences['total']?> Agences</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-user"></i>
@@ -140,33 +141,48 @@ ob_start();
                             Reservation
                         </div>
                     </div>
-                    <form method="post" class="filter-form">
+                    <form action="index.php?action=home" method="post" class="filter-form">
                         <div class="first-row">
-                            <select name="depart_destination" class="form-control col-lg-3">
-                            <option disabled>Ville de Départ et Destination</option>
-                            <?php
-                            $data = Manager::getData("tarif", true)['data'];
-                            // die(var_dump($data));
-                            if (is_array($data) || is_object($data)) {
-                                foreach ($data as $value) {
-                                ?>
-                                <option value="<?= $value['id_tarif']?>"><?= $value['code_tarif']?></option>
-                            <?php } }?>
+                            <select name="depart" class="form-control col-lg-3" required>
+                                <option disabled selected>Ville de Départ</option>
+                                <?php
+                                $data = Manager::getData("ville", true)['data'];
+                                // die(var_dump($data));
+                                if (is_array($data) || is_object($data)) {
+                                    foreach ($data as $value) {
+                                    ?>
+                                    <option value="<?= $value['id_ville']?>"><?= $value['intitule']?></option>
+                                <?php } }?>
                             </select>
-                            <select name="bus">
-                                <option disabled>Bus</option>
+                            <select name="destination" class="form-control col-lg-3" required>
+                                <option disabled selected>Ville de Destination</option>
+                                <?php
+                                $data = Manager::getData("ville", true)['data'];
+                                // die(var_dump($data));
+                                if (is_array($data) || is_object($data)) {
+                                    foreach ($data as $value) {
+                                    ?>
+                                    <option value="<?= $value['id_ville']?>"><?= $value['intitule']?></option>
+                                <?php } }?>
+                            </select>
+                            <select name="bus" required>
+                                <option disabled selected>Bus</option>
                                 <option value="0">Express</option>
                                 <option value="1">Climatisé</option>
                             </select>
-                            <br><br>
-                            <label>Date</label>
-                            <input type="date" class="form-control" name="date">
-                            
-                            <label>Heure</label>
-                            <input type="text" class="form-control" name="heure">
-                            <br>
+                            <select name="heure">
+                                <option disabled selected>Heure</option>
+                                <option value="05H">05H</option>
+                                <option value="06H">O6H</option>
+                                <option value="07H">07H</option>
+                                <option value="08H">O8H</option>
+                            </select>
+                            <br><br><br><br>
                         </div>
                         <div class="second-row">
+                        <label>Date</label>
+                        <input type="date" class="form-control" name="date" required>
+                        <br>
                             <!--<div class="form-group">
                                 <input type="text" class="form-control" name="" placeholder="Nom">
                             </div>
@@ -179,7 +195,7 @@ ob_start();
                             <div class="form-group">
                                 <input type="tel" class="form-control" name="" placeholder="(+227)00000000">
                             </div>-->
-                            <button type="submit" class="search-btn">Réserver</button>
+                            <button type="submit" class="search-btn">Suivant</button>
                         </div>
                     </form>
                 </div>
@@ -476,7 +492,7 @@ ob_start();
     <!-- Feature Section End -->
 
     <!-- Video Section Begin -->
-    <div class="video-section set-bg" data-setbg="https://youtu.be/jWp-x76WqeA">
+    <div class="video-section set-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -499,10 +515,10 @@ ob_start();
                 <div class="col-lg-12">
                     <div class="properties-title">
                         <div class="section-title">
-                            <span>Top Property For You</span>
+                            <!--<span>Top Property For You</span>-->
                             <h2>Nos Medias</h2>
                         </div>
-                        <a href="#" class="top-property-all">View All Property</a>
+                        <a href="index.php?action=missions" class="top-property-all">Voir tous nos détails</a>
                     </div>
                 </div>
             </div>
@@ -530,15 +546,15 @@ ob_start();
                         </div>
                         <div class="col-lg-6">
                             <div class="stp-text">
-                                <div class="s-text">For Sale</div>
+                                <!--<div class="s-text">For Sale</div>-->
                                 <h2><?= $value['intitule_post']?></h2>
                                 <div class="room-price">
                                     <span>Thème:</span>
                                     <h4><?= $value['theme']?></h4>
                                 </div>
-                                <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
+                                <!--<div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>-->
                                 <p><?= $value['description']?></p>
-                                <ul class="room-features">
+                                <!--<ul class="room-features">
                                     <li>
                                         <i class="fa fa-arrows"></i>
                                         <p>5201 sqft</p>
@@ -555,7 +571,7 @@ ob_start();
                                         <i class="fa fa-car"></i>
                                         <p>1 Garage</p>
                                     </li>
-                                </ul>
+                                </ul>-->
                             </div>
                         </div>
                     </div>
@@ -575,26 +591,39 @@ ob_start();
                 <div class="col-lg-12">
                     <div class="section-title">
                         <span>Le plaisir de voyage</span>
-                        <h2>Administration</h2>
+                        <h2>Nos Agences</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="agent-carousel owl-carousel">
+                    <?php
+                    $target = '';
+                    if ($_SERVER["SERVER_NAME"] == 'localhost') {
+                        $target = "http://localhost/dromadaire/";
+                    } else {
+                        $target = "http://coronackathon.org/droma_admin";
+                    }
+                    $data = Manager::getData("agence", true)['data'];
+                    //die(var_dump($data));
+                    if (is_array($data) || is_object($data)) {
+                        foreach ($data as $value) {
+                            $ville = Manager::getData('ville', 'id_ville', $value['ville'])['data']['intitule'];
+                        ?>
                     <div class="col-lg-3">
                         <div class="single-agent">
                             <div class="sa-pic">
-                                <img src="public/img/agent/agent-1.jpg" alt="">
+                                <img src="<?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="<?= $value['nom_agence']?>">
                                 <div class="hover-social">
                                     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
                                 </div>
                             </div>
-                            <h5>Matthew Robbins <span>Founder & Ceo</span></h5>
+                            <h5><?= $value['nom_agence']?><span><?= $ville;?></span></h5>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <!--<div class="col-lg-3">
                         <div class="single-agent">
                             <div class="sa-pic">
                                 <img src="public/img/agent/agent-2.jpg" alt="">
@@ -645,7 +674,10 @@ ob_start();
                             </div>
                             <h5>Clifford Colon <span>Saler Manager</span></h5>
                         </div>
-                    </div>
+                    </div>-->
+                    <?php 
+                        }
+                    } ?>
                 </div>
             </div>
         </div>
