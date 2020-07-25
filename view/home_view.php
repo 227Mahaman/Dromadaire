@@ -143,7 +143,7 @@ ob_start();
                     </div>
                     <form action="index.php?action=home" method="post" class="filter-form">
                         <div class="first-row">
-                            <select name="depart" class="form-control col-lg-3">
+                            <select name="depart" class="form-control col-lg-3" required>
                                 <option disabled selected>Ville de Départ</option>
                                 <?php
                                 $data = Manager::getData("ville", true)['data'];
@@ -154,7 +154,7 @@ ob_start();
                                     <option value="<?= $value['id_ville']?>"><?= $value['intitule']?></option>
                                 <?php } }?>
                             </select>
-                            <select name="destination" class="form-control col-lg-3">
+                            <select name="destination" class="form-control col-lg-3" required>
                                 <option disabled selected>Ville de Destination</option>
                                 <?php
                                 $data = Manager::getData("ville", true)['data'];
@@ -165,7 +165,7 @@ ob_start();
                                     <option value="<?= $value['id_ville']?>"><?= $value['intitule']?></option>
                                 <?php } }?>
                             </select>
-                            <select name="bus">
+                            <select name="bus" required>
                                 <option disabled selected>Bus</option>
                                 <option value="0">Express</option>
                                 <option value="1">Climatisé</option>
@@ -181,7 +181,7 @@ ob_start();
                         </div>
                         <div class="second-row">
                         <label>Date</label>
-                        <input type="date" class="form-control" name="date">
+                        <input type="date" class="form-control" name="date" required>
                         <br>
                             <!--<div class="form-group">
                                 <input type="text" class="form-control" name="" placeholder="Nom">
@@ -492,13 +492,13 @@ ob_start();
     <!-- Feature Section End -->
 
     <!-- Video Section Begin -->
-    <div class="video-section set-bg" data-setbg="https://youtu.be/jWp-x76WqeA">
+    <div class="video-section set-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-text">
-                        <iframe src="https://youtu.be/jWp-x76WqeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <a href="https://youtu.be/jWp-x76WqeA" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                        <iframe src="https://youtu.be/jWp-x76WqeA" width="1000" height="600" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!--<a href="https://youtu.be/jWp-x76WqeA" class="play-btn video-popup"><i class="fa fa-play"></i></a>-->
                         <h4></h4>
                         <h2></h2>
                     </div>
@@ -515,10 +515,10 @@ ob_start();
                 <div class="col-lg-12">
                     <div class="properties-title">
                         <div class="section-title">
-                            <span>Top Property For You</span>
+                            <!--<span>Top Property For You</span>-->
                             <h2>Nos Medias</h2>
                         </div>
-                        <a href="#" class="top-property-all">View All Property</a>
+                        <a href="index.php?action=missions" class="top-property-all">Voir tous nos détails</a>
                     </div>
                 </div>
             </div>
@@ -546,7 +546,7 @@ ob_start();
                         </div>
                         <div class="col-lg-6">
                             <div class="stp-text">
-                                <div class="s-text">For Sale</div>
+                                <!--<div class="s-text">For Sale</div>-->
                                 <h2><?= $value['intitule_post']?></h2>
                                 <div class="room-price">
                                     <span>Thème:</span>
@@ -554,7 +554,7 @@ ob_start();
                                 </div>
                                 <div class="properties-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
                                 <p><?= $value['description']?></p>
-                                <ul class="room-features">
+                                <!--<ul class="room-features">
                                     <li>
                                         <i class="fa fa-arrows"></i>
                                         <p>5201 sqft</p>
@@ -571,7 +571,7 @@ ob_start();
                                         <i class="fa fa-car"></i>
                                         <p>1 Garage</p>
                                     </li>
-                                </ul>
+                                </ul>-->
                             </div>
                         </div>
                     </div>
@@ -591,7 +591,7 @@ ob_start();
                 <div class="col-lg-12">
                     <div class="section-title">
                         <span>Le plaisir de voyage</span>
-                        <h2>Administration</h2>
+                        <h2>Nos Agences</h2>
                     </div>
                 </div>
             </div>
@@ -603,8 +603,8 @@ ob_start();
                                 <img src="public/img/agent/agent-1.jpg" alt="">
                                 <div class="hover-social">
                                     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
                                 </div>
                             </div>
                             <h5>Matthew Robbins <span>Founder & Ceo</span></h5>
