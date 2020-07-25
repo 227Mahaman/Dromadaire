@@ -241,32 +241,34 @@ if (!empty($_POST)) {
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="footer-widget">
-                            <h4>Nos grandes villes</h4>
+                            <h4>Nos pays où nous sommes présent.</h4>
                             <ul>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Agadez</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Dosso</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Diffa</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Maradi</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Tahaou</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Tillabéri</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Zinder</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Niamey</a></li>
+                            <?php
+                                $data = Manager::getData("pays", true)['data'];
+                                //die(var_dump($data));
+                                if (is_array($data) || is_object($data)) {
+                                    foreach ($data as $value) {
+                                    ?>
+                                <li><i class="fa fa-caret-right"></i> <a href="#"><?= $value['nom']?></a></li>
+                                <?php 
+                                }
+                            } ?>
                             </ul>
-                            <ul>
+                            <!--<ul>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">Abidjan</a></li>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">Bamako</a></li>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">Cotonou</a></li>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">Lomé</a></li>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">Ouagadougou</a></li>
                                 <li><i class="fa fa-caret-right"></i> <a href="#">San Diego</a></li>
-                            </ul>
+                            </ul>-->
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="footer-widget">
                             <h4>Social</h4>
                             <ul class="social">
-                                <li><i class="ti-facebook"></i> <a href="#">Facebook</a></li>
+                                <li><i class="ti-facebook"></i> <a href="https://facebook.com/PlaisirDeVoyager/">Facebook</a></li>
                                 <li><i class="ti-twitter-alt"></i> <a href="https://twitter.com/sonefstv?lang=fr">Twitter</a></li>
                             </ul>
                         </div>
@@ -288,8 +290,8 @@ if (!empty($_POST)) {
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="fb-page" data-href="https://www.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
+                    <div class="fb-page" data-href="https://facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
                     </div>
                 </div>
                 </div>
