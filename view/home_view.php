@@ -141,7 +141,7 @@ ob_start();
                             Reservation
                         </div>
                     </div>
-                    <form method="post" class="filter-form">
+                    <form action="index.php?action=home" method="post" class="filter-form">
                         <div class="first-row">
                             <select name="depart_destination" class="form-control col-lg-3">
                             <option disabled>Ville de Départ et Destination</option>
