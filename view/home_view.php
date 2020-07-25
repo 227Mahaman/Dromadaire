@@ -615,7 +615,7 @@ ob_start();
                             <div class="sa-pic">
                                 <img src="<?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="<?= $value['nom_agence']?>">
                                 <div class="hover-social">
-                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" class="twitter"><i class="fa fa-map"></i></a>
                                     <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
                                     <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
                                 </div>

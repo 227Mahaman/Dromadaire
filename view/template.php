@@ -32,8 +32,8 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="public/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
 </head>
-
-<body style=" background-color: #f7f7f7;">
+<!-- #f7f7f7 -->
+<body style=" background-color: #FFFFF0;">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
