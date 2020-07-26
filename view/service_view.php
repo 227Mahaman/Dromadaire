@@ -1,5 +1,5 @@
 <?php
-$title = "Nos Destination & Tarif";
+$title = "Nos Services";
 ob_start();
 ?>
 

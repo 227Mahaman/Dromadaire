@@ -59,6 +59,8 @@ if (!empty($_GET['action'])) {
         include_once('view/media_view.php');
     } elseif ($action == "service") { //View Nos services
         include_once('view/service_view.php');
+    } elseif ($action == "eclient") { //View Espace client
+        include_once('view/espaceClient_view.php');
     } elseif ($action == "agence") { //View Agence
         include_once('view/agence_view.php');
     } elseif ($action == "contact") { //View Contact
