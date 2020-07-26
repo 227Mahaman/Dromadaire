@@ -108,10 +108,10 @@ ob_start();
                                         <span>Saler Marketing</span>
                                     </div>-->
                                     <div class="agent-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-youtube"></i></a>
-                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="https://facebook.com/PlaisirDeVoyager/"><i class="fa fa-facebook"></i></a>
+                                        <a href="https://twitter.com/sonefstv?lang=fr"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.youtube.com/channel/UCwpNgtSWwgziy4XSATdNa-g"><i class="fa fa-youtube"></i></a>
+                                        <a href="https://www.instagram.com/s0nef._a/"><i class="fa fa-instagram"></i></a>
                                     </div>
                                     <p>In today’s net-savvy world it has become common for any business to have a
                                         website which they use mostly for advertising their products and services.

@@ -252,14 +252,6 @@ if (!empty($_POST)) {
                                 }
                             } ?>
                             </ul>
-                            <!--<ul>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Abidjan</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Bamako</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Cotonou</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Lomé</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">Ouagadougou</a></li>
-                                <li><i class="fa fa-caret-right"></i> <a href="#">San Diego</a></li>
-                            </ul>-->
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -268,6 +260,8 @@ if (!empty($_POST)) {
                             <ul class="social">
                                 <li><i class="ti-facebook"></i> <a href="https://facebook.com/PlaisirDeVoyager/">Facebook</a></li>
                                 <li><i class="ti-twitter-alt"></i> <a href="https://twitter.com/sonefstv?lang=fr">Twitter</a></li>
+                                <li><i class="ti-instagram"></i> <a href="https://www.instagram.com/s0nef._a/">Instagram</a></li>
+                                <li><i class="ti-youtube"></i> <a href="https://www.youtube.com/channel/UCwpNgtSWwgziy4XSATdNa-g">Youtube</a></li>
                             </ul>
                         </div>
                     </div>
