@@ -113,17 +113,16 @@ ob_start();
                                         <a href="https://www.youtube.com/channel/UCwpNgtSWwgziy4XSATdNa-g"><i class="fa fa-youtube"></i></a>
                                         <a href="https://www.instagram.com/s0nef._a/"><i class="fa fa-instagram"></i></a>
                                     </div>
-                                    <p>In today’s net-savvy world it has become common for any business to have a
-                                        website which they use mostly for advertising their products and services.
+                                    <p>
                                     </p>
                                 </div>
                             </div>
                             <div class="col-lg-6 offset-lg-1">
                                 <form action="#" class="agent-contact-form">
-                                    <input type="text" placeholder="Name*">
-                                    <input type="text" placeholder="Email">
-                                    <textarea placeholder="Messages"></textarea>
-                                    <button type="submit" class="site-btn">Send Message</button>
+                                    <input type="text" name="nom" placeholder="Name*">
+                                    <input type="text" name="email" placeholder="Email">
+                                    <textarea name="message" placeholder="Messages"></textarea>
+                                    <button type="submit" class="site-btn">Envoyer</button>
                                 </form>
                             </div>
                         </div>

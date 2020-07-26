@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>Contact Us</h2>
+                        <h2>Contactez Nous</h2>
                         <div class="breadcrumb-option">
                             <a href="index.php?action=home"><i class="fa fa-home"></i> Accueil</a>
                             <span>Contact</span>
@@ -27,15 +27,15 @@
                 <div class="col-lg-6">
                     <div class="contact-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.5524090066037!2d-71.10245469994108!3d42.47980730490846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3748250c43a43%3A0xe1b9879a5e9b6657!2sWinter%20Street%20Public%20Parking%20Lot!5e0!3m2!1sen!2sbd!4v1577299251173!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/d/viewer?msa=0&ie=UTF8&t=m&ll=13.530970371937721%2C2.1097012783204816&spn=18.721452%2C24.65332&z=20&source=embed&showlabs=1&mid=1YhcBuNRssDYwJIyYqJylJfmxlk8"
                             height="700" style="border:0;" allowfullscreen=""></iframe>
                         <div class="map-inside">
                             <i class="icon_pin"></i>
                             <div class="inside-widget">
-                                <h4>New York</h4>
+                                <h4>Niamey</h4>
                                 <ul>
-                                    <li>Phone: +12-345-6789</li>
-                                    <li>Add: 16 Creek Ave. Farmingdale, NY</li>
+                                    <li>Phone: (+227) 20000000 / 89592626</li>
+                                    <li>Add: Avenue Mali Bero, Niamey-NIGER</li>
                                 </ul>
                             </div>
                         </div>
@@ -47,14 +47,14 @@
                             <div class="contact-text">
                                 <div class="section-title">
                                     <span>Contact</span>
-                                    <h2>Get In Touch</h2>
+                                    <h2>On est à votre écoute.</h2>
                                 </div>
                                 <form action="#" class="contact-form">
-                                    <input type="text" placeholder="Name">
-                                    <input type="text" placeholder="Email">
+                                    <input name="nom" type="text" placeholder="Nom">
+                                    <input type="text" name="email" placeholder="Email">
                                     <input type="text" placeholder="Website">
-                                    <textarea placeholder="Messages"></textarea>
-                                    <button type="submit" class="site-btn">Send Message</button>
+                                    <textarea name="message" placeholder="Messages"></textarea>
+                                    <button type="submit" class="site-btn">Envoyer</button>
                                 </form>
                             </div>
                         </div>
