@@ -90,7 +90,7 @@ ob_start();
                         <h4>Agence Siège Niamey, Map</h4>
                         <div class="map-inside">
                             <iframe
-                                src="https://www.google.com/maps/d/viewer?msa=0&ie=UTF8&t=m&ll=13.530970371937721%2C2.1097012783204816&spn=18.721452%2C24.65332&z=20&source=embed&showlabs=1&mid=1YhcBuNRssDYwJIyYqJylJfmxlk8"
+                                src="https://www.google.com/maps?ll=13.52977,2.111208&z=16&t=m&hl=en&gl=BD&mapclient=embed&cid=12589593004585847853"
                                 height="320" style="border:0;" allowfullscreen=""></iframe>
                             <div class="icon">
                                 <i class="fa fa-home"></i>
