@@ -40,7 +40,7 @@ class Manager
         if (!empty($params)) { // parameters must exist before you call bind_param() method
             $req->execute($params);
         }else {
-            return self::bdd()->query($sql);
+            $req->execute();
         }
         if ($res = $req->fetchAll(PDO::FETCH_ASSOC)) {
             return $res;

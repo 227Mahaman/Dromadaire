@@ -31,6 +31,7 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="public/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="public/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
+    <script src="public/js/jquery-3.3.1.min.js"></script>
 </head>
 <!-- #f7f7f7 -->
 
@@ -307,7 +308,7 @@ if (!empty($_POST)) {
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0&appId=1475822219173269&autoLogAppEvents=1"></script>
     
     <!-- Js Plugins -->
-    <script src="public/js/jquery-3.3.1.min.js"></script>
+    
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/jquery.magnific-popup.min.js"></script>
     <script src="public/js/jquery.nice-select.min.js"></script>
