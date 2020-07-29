@@ -181,10 +181,29 @@ ob_start();
                         </select>
                         <select name="heure">
                             <option disabled selected>Heure</option>
+                            <option value="00H">00H</option>
+                            <option value="01H">01H</option>
+                            <option value="02H">02H</option>
+                            <option value="03H">03H</option>
+                            <option value="04H">04H</option>
                             <option value="05H">05H</option>
                             <option value="06H">O6H</option>
                             <option value="07H">07H</option>
                             <option value="08H">O8H</option>
+                            <option value="09H">09H</option>
+                            <option value="10H">10H</option>
+                            <option value="11H">11H</option>
+                            <option value="13H">13H</option>
+                            <option value="14H">14H</option>
+                            <option value="15H">15H</option>
+                            <option value="16H">16H</option>
+                            <option value="17H">17H</option>
+                            <option value="18H">18H</option>
+                            <option value="19H">19H</option>
+                            <option value="20H">20H</option>
+                            <option value="21H">21H</option>
+                            <option value="22H">22H</option>
+                            <option value="23H">23H</option>
                         </select>
                         <br><br><br><br>
                     </div>
