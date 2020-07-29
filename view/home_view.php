@@ -508,6 +508,195 @@ ob_start();
     </div>
     <!-- Video Section End -->
 
+    <!-- Feature Section Begin -->
+    <section class="feature-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>La participation est ouverte tous.</span>
+                        <h2>Jeux Concours</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="feature-carousel owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="feature-item">
+                            <div class="fi-pic set-bg" data-setbg="public/img/feature/jc-1.jpg">
+                                <!--<div class="pic-tag">
+                                    <div class="f-text">feauture</div>
+                                    <div class="s-text">For Sale</div>
+                                </div>-->
+                                <div class="feature-author">
+                                    <!--<div class="fa-pic">
+                                        <img src="public/img/feature/f-author-1.jpg" alt="">
+                                    </div>-->
+                                    <div class="fa-text">
+                                        <span>Intitulé</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fi-text">
+                                <div class="inside-text">
+                                    <h4>Selfie Facebook</h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i> Date:</li>
+                                        <li><i class="fa fa-tag"></i> 20 Janvier</li>
+                                    </ul>
+                                    <h5 class="price">1ere Edition<span></span></h5>
+                                </div>
+                                <ul class="room-features">
+                                    <li>
+                                        <!--<i class="fa fa-arrows"></i>-->
+                                        <p>2020</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature-item">
+                            <div class="fi-pic set-bg" data-setbg="public/img/feature/jc-7.jpg">
+                                <!--<div class="pic-tag">
+                                    <div class="f-text">feauture</div>
+                                    <div class="s-text">For Sale</div>
+                                </div>-->
+                                <div class="feature-author">
+                                    <!--<div class="fa-pic">
+                                        <img src="public/img/feature/f-author-2.jpg" alt="">
+                                    </div>-->
+                                    <div class="fa-text">
+                                        <span>Selfie Instagram</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fi-text">
+                                <div class="inside-text">
+                                    <h4>Intitulé</h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i> Date:</li>
+                                        <li><i class="fa fa-tag"></i> 12 Avril</li>
+                                    </ul>
+                                    <h5 class="price"> 1ere Edition<span></span></h5>
+                                </div>
+                                <ul class="room-features">
+                                    <li>
+                                        <!--<i class="fa fa-arrows"></i>-->
+                                        <p>2020</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature-item">
+                            <div class="fi-pic set-bg" data-setbg="public/img/feature/jc-12.jpg">
+                                <!--<div class="pic-tag">
+                                    <div class="f-text">feauture</div>
+                                    <div class="s-text">For Sale</div>
+                                </div>-->
+                                <div class="feature-author">
+                                    <!--<div class="fa-pic">
+                                        <img src="public/img/feature/f-author-3.jpg" alt="">
+                                    </div>-->
+                                    <div class="fa-text">
+                                        <span>Sonef</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fi-text">
+                                <div class="inside-text">
+                                    <h4>Intitulé</h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i> Date:</li>
+                                        <li><i class="fa fa-tag"></i> 30 Mai</li>
+                                    </ul>
+                                    <h5 class="price">2e Edition<span></span></h5>
+                                </div>
+                                <ul class="room-features">
+                                    <li>
+                                        <!--<i class="fa fa-arrows"></i>-->
+                                        <p>2020</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature-item">
+                            <div class="fi-pic set-bg" data-setbg="public/img/feature/jc-14.jpg">
+                                <!--<div class="pic-tag">
+                                    <div class="f-text">feauture</div>
+                                    <div class="s-text">For Sale</div>
+                                </div>-->
+                                <div class="feature-author">
+                                    <!--<div class="fa-pic">
+                                        <img src="public/img/feature/f-author-3.jpg" alt="">
+                                    </div>-->
+                                    <div class="fa-text">
+                                        <span>Ok ok</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fi-text">
+                                <div class="inside-text">
+                                    <h4>Intitulé</h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i> Date:</li>
+                                        <li><i class="fa fa-month"></i> 00 Juin</li>
+                                    </ul>
+                                    <h5 class="price">1ere Edition<span></span></h5>
+                                </div>
+                                <ul class="room-features">
+                                    <li>
+                                        <!--<i class="fa fa-arrows"></i>-->
+                                        <p>2020</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature-item">
+                            <div class="fi-pic set-bg" data-setbg="public/img/feature/jc-16.jpg">
+                                <!--<div class="pic-tag">
+                                    <div class="f-text">feauture</div>
+                                    <div class="s-text">For Sale</div>
+                                </div>-->
+                                <div class="feature-author">
+                                    <!--<div class="fa-pic">
+                                        <img src="public/img/feature/f-author-3.jpg" alt="">
+                                    </div>-->
+                                    <div class="fa-text">
+                                        <span>Plantation d'arbre</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fi-text">
+                                <div class="inside-text">
+                                    <h4>Intitulé</h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i> Date:</li>
+                                        <li><i class="fa fa-tag"></i> 03 Août</li>
+                                    </ul>
+                                    <h5 class="price">2e Edition<span></span></h5>
+                                </div>
+                                <ul class="room-features">
+                                    <li>
+                                        <!--<i class="fa fa-arrows"></i>-->
+                                        <p>2020</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature Section End -->
+
     <!-- Top Properties Section Begin -->
     <div class="top-properties-section spad">
         <div class="container">
