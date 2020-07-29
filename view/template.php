@@ -258,9 +258,9 @@ if (!empty($_POST)) {
                         <div class="footer-widget">
                             <h4>Social</h4>
                             <ul class="social">
-                                <li><i class="ti-facebook"></i> <a href="https://facebook.com/PlaisirDeVoyager/">Facebook</a></li>
-                                <li><i class="ti-twitter-alt"></i> <a href="https://twitter.com/sonefstv?lang=fr">Twitter</a></li>
-                                <li><i class="ti-instagram"></i> <a href="https://www.instagram.com/s0nef._a/">Instagram</a></li>
+                                <li><i class="ti-facebook"></i> <a href="https://www.facebook.com/PlaisirDeVoyager/">Facebook</a></li>
+                                <li><i class="ti-twitter-alt"></i> <a href="https://twitter.com/Sonefstv">Twitter</a></li>
+                                <li><i class="ti-instagram"></i> <a href="https://www.instagram.com/soneftransport">Instagram</a></li>
                                 <li><i class="ti-youtube"></i> <a href="https://www.youtube.com/channel/UCwpNgtSWwgziy4XSATdNa-g">Youtube</a></li>
                             </ul>
                         </div>
@@ -282,8 +282,8 @@ if (!empty($_POST)) {
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="fb-page" data-href="https://facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
+                    <div class="fb-page" data-href="https://www.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
                     </div>
                 </div>
                 </div>
