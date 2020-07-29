@@ -11,10 +11,10 @@ class Manager
 
     public static function bdd()
     {
-        $dbname = 'cp1363653p04_dromadaire';
-        $user = 'cp1363653p04_dromadaire';
-        $pass = 'BqWPDu3Qmn';
-        $host = 'localhost';
+        $dbname = 'sonef1339852';
+        $user = 'sonef1339852';
+        $pass = 'b9K7A3P7t3S7';
+        $host = '185.98.131.128';
         if ($_SERVER["SERVER_NAME"] == 'localhost') {
             $dbname = 'dromadaire';
             $user = 'root';

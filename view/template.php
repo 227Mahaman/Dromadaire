@@ -33,6 +33,7 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
 </head>
 <!-- #f7f7f7 -->
+
 <body style=" background-color: #FFFFF0;">
     <!-- Page Preloder -->
     <div id="preloder">
@@ -241,16 +242,16 @@ if (!empty($_POST)) {
                         <div class="footer-widget">
                             <h4>Nos pays où nous sommes présent.</h4>
                             <ul>
-                            <?php
+                                <?php
                                 $data = Manager::getData("pays", true)['data'];
                                 //die(var_dump($data));
                                 if (is_array($data) || is_object($data)) {
                                     foreach ($data as $value) {
-                                    ?>
-                                <li><i class="fa fa-caret-right"></i> <a href="#"><?= $value['nom']?></a></li>
-                                <?php 
-                                }
-                            } ?>
+                                ?>
+                                        <li><i class="fa fa-caret-right"></i> <a href="#"><?= $value['nom'] ?></a></li>
+                                <?php
+                                    }
+                                } ?>
                             </ul>
                         </div>
                     </div>
@@ -277,26 +278,34 @@ if (!empty($_POST)) {
                         </div>
                     </div>
                     <br> <br>
-                <div class="col-md-6 col-12">
-                    <a class="twitter-timeline" data-height="400" href="https://twitter.com/sonefstv?lang=fr">Tweets by Sonef</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div class="col-md-6 col-12">
-                    <div class="fb-page" data-href="https://www.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
+                    <div class="col-md-6 col-12">
+                        <a class="twitter-timeline" data-height="400" href="https://twitter.com/sonefstv?lang=fr">Tweets by Sonef</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
-                </div>
+                    <div class="col-md-6 col-12">
+                        <div class="fb-page" data-href="https://www.facebook.com/PlaisirDeVoyager/" data-tabs="timeline" data-width="550" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/PlaisirDeVoyager/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PlaisirDeVoyager/">Sonef</a></blockquote>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="copyright-text">
-                <p><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tous les droits réservés à SONEF, développé<i class="ti-heart" aria-hidden="true"></i> par <a href="www.elyconsulting.net" target="_blank">Ely Consulting</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></p>
+                <p>
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>
+                            document.write(new Date().getFullYear());
+                        </script> Tous les droits réservés à SONEF, développé<i class="ti-heart" aria-hidden="true"></i> par <a href="www.elyconsulting.net" target="_blank">Ely Consulting</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </p>
             </div>
         </div>
     </footer>
     <!-- Footer Section End -->
-
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0&appId=1475822219173269&autoLogAppEvents=1"></script>
+    
     <!-- Js Plugins -->
     <script src="public/js/jquery-3.3.1.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
