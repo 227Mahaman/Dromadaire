@@ -966,13 +966,14 @@ ob_start();
         $.getJSON("ville.json", function(data) {
             var option = '<span class="current">Ville de Destination</span>';
             $.each(data, function(key, val) {
+                console.log(key, val, "ok villes");
                 if (val.vdepart == v) {
                     console.log(key, val, "ok ville");
 
                     option += '<li data-value="' + val.id_ville + '" class="option">' + val.intitule + '</li>';
                 }
             });
-            console.log($("#destination"));
+            console.log(option);
 
             $(".destination>.list").html(option);
         });
