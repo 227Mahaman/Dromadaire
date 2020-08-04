@@ -260,6 +260,22 @@ class Manager
             echo json_encode(self::$results);
         }
     }
+    /**
+     * get the max lenth of table
+     * 
+     * @param mixed $table
+     * @param mixed $field
+     * @return array
+     */
+    public static function maxLength($table, $fields)
+    {
+        $sql = "SELECT COUNT($fields) nb FROM $table;";
+        $req = self::bdd()->query($sql);
+
+        if (self::$results['data'] = $req->fetch(PDO::FETCH_ASSOC)) {
+            echo json_encode(self::$results);
+        }
+    }
 
     /**
      * get the last id of table

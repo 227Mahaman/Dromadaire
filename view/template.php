@@ -21,6 +21,8 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
     <link rel="stylesheet" href="public/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/elegant-icons.css" type="text/css">
@@ -37,7 +39,7 @@ if (!empty($_POST)) {
 
 <body style=" background-color: #FFFFF0;">
     <!-- Page Preloder -->
-    <div id="preloder">
+    <div id="prelode">
         <div class="loader"></div>
     </div>
 
@@ -249,8 +251,22 @@ if (!empty($_POST)) {
                                 if (is_array($data) || is_object($data)) {
                                     foreach ($data as $value) {
                                 ?>
-                                        <li><i class="fa fa-caret-right"></i> <a href="#"><?= $value['nom'] ?></a></li>
+                                        <li <?= $value['nom'] == 'Niger' ? 'id="nig"' : "" ?>><i class="fa fa-caret-right"></i> <a href="#"><?= $value['nom'] ?></a></li>
+                                        <?php
+                                        if ($value['nom'] == 'Niger') {
+                                            $ville = Manager::getData('ville', 'pays', $value['id_pays'], true)['data'];
+                                            // Manager::showError($ville);
+                                            echo ('<ul class="row">');
+                                            foreach ($ville as $val) {
+
+
+
+                                        ?>
+                                                <li class="col-lg-3"><i class="fa fa-caret-right"></i> <a href="#"><?= $val['intitule'] ?></a></li>
                                 <?php
+                                            }
+                                            echo ("</ul>");
+                                        }
                                     }
                                 } ?>
                             </ul>
@@ -274,7 +290,7 @@ if (!empty($_POST)) {
                                 <li><i class="fa fa-map-marker"></i> Boulevard Mali Béro 11576,Niamey</li>
                                 <li><i class="fa fa-phone"></i> (+227) 20000000 / 89 59 26 26</li>
                                 <li><i class="fa fa-envelope"></i> contact@sonef.net</li>
-                                <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li>
+                                <!-- <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li> -->
                             </ul>
                         </div>
                     </div>
@@ -306,9 +322,9 @@ if (!empty($_POST)) {
     <!-- Footer Section End -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0&appId=1475822219173269&autoLogAppEvents=1"></script>
-    
+
     <!-- Js Plugins -->
-    
+
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/jquery.magnific-popup.min.js"></script>
     <script src="public/js/jquery.nice-select.min.js"></script>
@@ -316,6 +332,7 @@ if (!empty($_POST)) {
     <script src="public/js/jquery-ui.min.js"></script>
     <script src="public/js/owl.carousel.min.js"></script>
     <script src="public/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 </body>
 
 </html>

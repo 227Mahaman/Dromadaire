@@ -174,11 +174,11 @@ ob_start();
                             <?php }
                             } ?>
                         </select>
-                        <select name="bus" required>
+                        <!-- <select name="bus" required>
                             <option disabled selected>Bus</option>
                             <option value="0">Express</option>
                             <option value="1">Climatisé</option>
-                        </select>
+                        </select> -->
                         <select name="heure">
                             <option disabled selected>Heure</option>
                             <option value="00H">00H</option>

@@ -1,12 +1,17 @@
 <?php
 
-require "model/Manager.php";
 session_start();
+require "model/Manager.php";
+if (isset($_SESSION['messages'])) {
+    unset($_SESSION['messages']);
+}
 if (!empty($_GET['action'])) {
+    // Manager::showError($_SESSION['client']);
     extract($_GET);
     if ($action == "home") {
-        if($_POST){// View Etape 1 de la Reservation
+        if ($_POST) { // View Etape 1 de la Reservation
             $data = $_POST;
+
             //var_dump($data);
             //die();
             $reservation = array();
@@ -23,36 +28,47 @@ if (!empty($_GET['action'])) {
             }
             $res = $manager->insert($reservation, "reservation");
             $res['lastId'] = $database->lastInsertId();
-            if($res['error'] == false){
+            if ($res['error'] == false) {
                 header('Location: index.php?action=reservation&id=' . $res['lastId']);
             }
         }
         include_once('view/home_view.php');
     } elseif ($action == "reservation") { //View Etape 2 de la Reservation
-        if($_POST){
+        if ($_POST) {
             $data = $_POST;
-            $reservation = array();
-            //$reservation['etat'] = $data['etat'];
-            $reservation['place'] = $data['place'];
-            $reservation['cout'] = $data['cout'];
-            //unset($data['etat']);
-            unset($data['place']);
-            unset($data['cout']);
-            $manager  = new Manager();
-            $res = $manager->insert($data, "client");
-            $database = Manager::bdd();
-            $res['lastId'] = $database->lastInsertId();
-            if (!empty($res['lastId'])) {
-                $reservation['client'] = $res['lastId'];
+            $datas = Manager::getData("client", "tel", $data['tel'])['data'];
+            if (!empty($datas['is_account']) && $datas['is_account'] == 1) {
+                $reservation = array();
+                $reservation['place'] = $data['place'];
+                $reservation['cout'] = $data['cout'];
+                $reservation['client'] = $datas['id_client'];
                 Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
+                header('Location: index.php?action=reservation&c=' . $datas['id_client']);
+            } else {
+
+                // Manager::showError($data);
+                $reservation = array();
+                //$reservation['etat'] = $data['etat'];
+                $reservation['place'] = $data['place'];
+                $reservation['cout'] = $data['cout'];
+                //unset($data['etat']);
+                unset($data['place']);
+                unset($data['cout']);
+                $manager  = new Manager();
+                $res = $manager->insert($data, "client");
+                $database = Manager::bdd();
+                $res['lastId'] = $database->lastInsertId();
+                if (!empty($res['lastId'])) {
+                    $reservation['client'] = $res['lastId'];
+                    Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
+                }
+                if ($res['error'] == false) {
+                    header('Location: index.php?action=reservation&c=' . $res['lastId']);
+                }
             }
-            if($res['error'] == false){
-                header('Location: index.php?action=reservation&c=' . $res['lastId']);
-            }
-            
-            $res = $manager->insert($reservation, "reservation");
-            $res['lastId'] = $database->lastInsertId();
-            
+
+            // $res = $manager->insert($reservation, "reservation");
+            // $res['lastId'] = $database->lastInsertId();
         }
         include_once('view/reservation_view.php');
     } elseif ($action == "media") { //View Media
@@ -65,6 +81,17 @@ if (!empty($_GET['action'])) {
         include_once('view/agence_view.php');
     } elseif ($action == "contact") { //View Contact
         include_once('view/contact_view.php');
+    } elseif ($action == "login") { //View login
+        if (!empty($_POST)) {
+            $datas = Manager::getData("client", "tel", $_POST['tel'])['data'];
+            if (!empty($datas['is_account']) && $datas['is_account'] == 1) {
+                $_SESSION['client'] = $datas;
+                header("Location: index.php?action=eclient");
+            } else {
+                $_SESSION['messages'] = "Ce numéro n'existe pas, veuillez faire une reservation!";
+            }
+        }
+        include_once('view/login_view.php');
     } elseif ($action == "forum") { //View Forum
         if (empty($_SESSION['equipe_candidat'])) {
             header("Location:index.php?action=home");
@@ -82,10 +109,10 @@ if (!empty($_GET['action'])) {
         //         $data['file'] = $manager->uploadProfilePicture($_FILES['file']);
         //     }
         //     $res = $manager->insert($data, "file_jointe");
-        // }
+        // }zz
         include_once('view/forum_view.php');
     } elseif ($action == "login") { //View Contact
-        if (!empty($_POST)) { 
+        if (!empty($_POST)) {
             /* extract($_POST);
             $sql = "SELECT id_candidat, nom_candidat, prenom_candidat,  email, telephone, role, nom_equipe,
             password_equipe, id_equipe, nom_region, nom_projet, id_projet, domaine, description, solution, statut, file_url 
