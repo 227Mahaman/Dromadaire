@@ -133,9 +133,9 @@ ob_start();
                                         <img src="<?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="">
                                     </div>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="property-text">
-                                        <div class="s-text">For Sale</div>
+                                <div class="col-md-8 row">
+                                    <div class="property-text col-md-6">
+                                        <div class="s-text">Agence</div>
                                         <h5 class="r-title"><?= $value['nom_agence']?></h5>
                                         <!--<div class="room-price">
                                             <span>Start From:</span>
@@ -163,6 +163,13 @@ ob_start();
                                             </li>
                                         </ul>-->
                                     </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                            if (!empty($value['localisation'])) {
+                                                echo(base64_decode($value['localisation']));
+                                            }
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +185,7 @@ ob_start();
                                 </div>
                                 <div class="col-md-8">
                                     <div class="property-text">
-                                        <div class="s-text">For Sale</div>
+                                        <div class="s-text">Agence</div>
                                         <h5 class="r-title">Villa 9721 Glen Creek</h5>
                                         <div class="room-price">
                                             <span>Start From:</span>
@@ -219,7 +226,7 @@ ob_start();
                                 </div>
                                 <div class="col-md-8">
                                     <div class="property-text">
-                                        <div class="s-text">For Sale</div>
+                                        <div class="s-text">Agence</div>
                                         <h5 class="r-title">Villa 9721 Glen Creek</h5>
                                         <div class="room-price">
                                             <span>Start From:</span>
@@ -260,7 +267,7 @@ ob_start();
                                 </div>
                                 <div class="col-md-8">
                                     <div class="property-text">
-                                        <div class="s-text">For Sale</div>
+                                        <div class="s-text">Agence</div>
                                         <h5 class="r-title">Villa 9721 Glen Creek</h5>
                                         <div class="room-price">
                                             <span>Start From:</span>

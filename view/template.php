@@ -73,7 +73,7 @@ if (!empty($_POST)) {
             <ul>
                 <li><a href="index.php?action=home">Accueil</a></li>
                 <li><a href="index.php?action=home#reservation">Réservation</a></li>
-                <li><a href="index.php?action=service">Nos Services</a></li>
+                <li><a href="index.php?action=service">Nos Destination & Tarif</a></li>
                 <li><a href="index.php?action=eclient">Espace Client</a></li>
                 <li><a href="index.php?action=media">Media</a></li>
                 <li><a href="index.php?action=contact">Contact</a></li>
@@ -117,7 +117,8 @@ if (!empty($_POST)) {
                             <ul>
                                 <li class="active"><a href="index.php?action=home">Accueil</a></li>
                                 <li><a href="index.php?action=home#reservation">Réservation</a></li>
-                                <li><a href="index.php?action=service">Nos Services</a></li>
+                                <li><a href="index.php?action=service">Nos Destination & Tarif</a></li>
+                                <li><a href="index.php?action=agence">Nos Agences/Gares</a></li>
                                 <li><a href="index.php?action=eclient">Espace Client</a></li>
                                 <li><a href="index.php?action=media">Media</a></li>
                                 <li><a href="index.php?action=contact">Contact</a></li>
