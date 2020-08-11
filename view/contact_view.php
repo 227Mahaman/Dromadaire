@@ -34,7 +34,7 @@
                             <div class="inside-widget">
                                 <h4>Niamey</h4>
                                 <ul>
-                                    <li>Phone: (+227) 20000000 / 89592626</li>
+                                    <li>Phone: (+227) 90901239 / 89592626</li>
                                     <li>Add: Avenue Mali Bero, Niamey-NIGER</li>
                                 </ul>
                             </div>

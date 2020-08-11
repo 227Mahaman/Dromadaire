@@ -87,7 +87,7 @@ if (!empty($_POST)) {
                     <i class="icon_phone"></i>
                     <div class="info-text">
                         <span>Phone:</span>
-                        <p>(+227) 20000000 / 89592626</p>
+                        <p>(+227) 90901239 / 89592626</p>
                     </div>
                 </li>
                 <li>
@@ -162,7 +162,7 @@ if (!empty($_POST)) {
                                     <i class="icon_phone"></i>
                                     <div class="info-text">
                                         <span>Phone:</span>
-                                        <p>(+227) 20000000 / 89592626</p>
+                                        <p>(+227) 90901239 / 89592626</p>
                                     </div>
                                 </li>
                                 <li>
@@ -291,7 +291,7 @@ if (!empty($_POST)) {
                             <h4>Contactez Nous</h4>
                             <ul class="contact-option">
                                 <li><i class="fa fa-map-marker"></i> Boulevard Mali Béro 11576,Niamey</li>
-                                <li><i class="fa fa-phone"></i> (+227) 20000000 / 89 59 26 26</li>
+                                <li><i class="fa fa-phone"></i> (+227) 90901239 / 89 59 26 26</li>
                                 <li><i class="fa fa-envelope"></i> contact@sonef.net</li>
                                 <!-- <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li> -->
                             </ul>
