@@ -149,7 +149,7 @@ if (!empty($_POST)) {
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="logo">
-                            <a href="./index.html"><img src="public/img/logo/logook2.png" alt=""></a>
+                            <a href="index.php?action=home"><img src="public/img/logo/logook2.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-9">
