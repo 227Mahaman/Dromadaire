@@ -1,5 +1,5 @@
 <?php
-$title = "Nos Services";
+$title = "Nos Destination & Tarif";
 ob_start();
 ?>
 
@@ -133,7 +133,7 @@ ob_start();
                     </div>-->
                 </div>
             </div>
-            <div class="col-lg-2">
+            <!-- <div class="col-lg-2">
                 <div class="property-sidebar">
                     <div class="best-agents">
                         <h4>Nos Agences</h4>
@@ -151,9 +151,9 @@ ob_start();
                                 $pays = Manager::getData('pays', 'id_pays', $ville['pays'])['data'];
                         ?>
                                 <a href="#" class="ba-item">
-                                    <!--<div class="ba-pic">
+                                    <div class="ba-pic">
                                 <img src="<//?= $target.Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="">
-                            </div>-->
+                            </div>
                                     <div class="ba-text">
                                         <h5><?= $value['nom_agence'] ?></h5>
                                         <span><?= $ville['intitule'] ?></span>
@@ -164,7 +164,7 @@ ob_start();
                         } ?>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

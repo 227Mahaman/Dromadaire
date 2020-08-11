@@ -21,8 +21,8 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
     <link rel="stylesheet" href="public/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/elegant-icons.css" type="text/css">
@@ -74,6 +74,7 @@ if (!empty($_POST)) {
                 <li><a href="index.php?action=home">Accueil</a></li>
                 <li><a href="index.php?action=home#reservation">Réservation</a></li>
                 <li><a href="index.php?action=service">Nos Destination & Tarif</a></li>
+                <li><a href="index.php?action=agence">Nos Agences/Gares</a></li>
                 <li><a href="index.php?action=eclient">Espace Client</a></li>
                 <li><a href="index.php?action=media">Media</a></li>
                 <li><a href="index.php?action=contact">Contact</a></li>
