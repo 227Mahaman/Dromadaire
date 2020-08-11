@@ -143,7 +143,7 @@ ob_start();
                 </div>
                 <form action="index.php?action=home" method="post" class="filter-form">
                     <div class="first-row">
-                        <select name="depart" id="depart" class="form-control col-lg-3" required>
+                        <select name="depart" id="depart" class="form-control searchable col-lg-3" required>
                             <option disabled selected>Ville de Départ</option>
                             <?php
                             $file = fopen("ville.json", "w+") or die("Can't create file");
@@ -163,7 +163,7 @@ ob_start();
                             <?php }
                             } ?>
                         </select>
-                        <select name="destination" id="destination" class="form-control destination col-lg-3" required>
+                        <select name="destination" id="destination" class="form-control searchable destination col-lg-3" required>
                             <option disabled selected>Ville de Destination</option>
                             <?php
                             // die(var_dump($data));
@@ -181,16 +181,16 @@ ob_start();
                         </select> -->
                         <select name="heure">
                             <option disabled selected>Heure</option>
-                            <option value="00H">00H</option>
+                            <!--<option value="00H">00H</option>
                             <option value="01H">01H</option>
                             <option value="02H">02H</option>
                             <option value="03H">03H</option>
                             <option value="04H">04H</option>
-                            <option value="05H">05H</option>
+                            <option value="05H">05H</option>-->
                             <option value="06H">O6H</option>
-                            <option value="07H">07H</option>
+                            <!--<option value="07H">07H</option>-->
                             <option value="08H">O8H</option>
-                            <option value="09H">09H</option>
+                            <!--<option value="09H">09H</option>
                             <option value="10H">10H</option>
                             <option value="11H">11H</option>
                             <option value="13H">13H</option>
@@ -203,7 +203,7 @@ ob_start();
                             <option value="20H">20H</option>
                             <option value="21H">21H</option>
                             <option value="22H">22H</option>
-                            <option value="23H">23H</option>
+                            <option value="23H">23H</option>-->
                         </select>
                         <br><br><br><br>
                     </div>

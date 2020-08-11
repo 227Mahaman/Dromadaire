@@ -63,7 +63,9 @@ if (!empty($_GET['action'])) {
                     Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
                 }
                 if ($res['error'] == false) {
-                    header('Location: index.php?action=reservation&c=' . $res['lastId']);
+                    $_SESSION['client_reservation'] = $res['lastId'];
+                    include_once("model/mail.php");
+                    //header('Location: index.php?action=reservation&c=' . $res['lastId']);
                 }
             }
 

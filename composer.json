@@ -1,0 +1,12 @@
+{
+    "name": "mahaman/azenta",
+    "authors": [
+        {
+            "name": "227Mahaman",
+            "email": "zalkiabass.456@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "6.1"
+    }
+}

@@ -21,8 +21,9 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="public/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/elegant-icons.css" type="text/css">
@@ -151,7 +152,7 @@ if (!empty($_POST)) {
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="logo">
-                            <a href="./index.html"><img src="public/img/logo/logook2.png" alt=""></a>
+                            <a href="index.php?action=home"><img src="public/img/logo/logook2.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-9">
