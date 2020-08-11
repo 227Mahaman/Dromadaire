@@ -143,7 +143,7 @@ ob_start();
                 </div>
                 <form action="index.php?action=home" method="post" class="filter-form">
                     <div class="first-row">
-                        <select name="depart" id="depart" class="form-control col-lg-3" required>
+                        <select name="depart" id="depart" class="form-control searchable col-lg-3" required>
                             <option disabled selected>Ville de Départ</option>
                             <?php
                             $file = fopen("ville.json", "w+") or die("Can't create file");
@@ -163,7 +163,7 @@ ob_start();
                             <?php }
                             } ?>
                         </select>
-                        <select name="destination" id="destination" class="form-control destination col-lg-3" required>
+                        <select name="destination" id="destination" class="form-control searchable destination col-lg-3" required>
                             <option disabled selected>Ville de Destination</option>
                             <?php
                             // die(var_dump($data));

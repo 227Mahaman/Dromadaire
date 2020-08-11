@@ -23,6 +23,7 @@ if (!empty($_POST)) {
     <!-- Css Styles -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="public/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/elegant-icons.css" type="text/css">
