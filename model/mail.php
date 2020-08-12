@@ -7,15 +7,13 @@ use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
 require 'vendor/autoload.php';
-//if($_SESSION['coachId']){
-//Manager::showError($_SESSION['coachId']);
-//$data = Manager::getData("users", "id", $_SESSION['coachId'], true)['data'];
-//Manager::showError($data);
-
 
 if (isset($_SESSION['client_reservation'])) {//Send Mail to Client
   //extract($_POST);
-  $data = Manager::getData("client", "id_client", $_SESSION['client_reservation'], true)['data'];
+  $id= $_SESSION['client_reservation'];
+  $data = Manager::getData("client", "id_client", $_SESSION['client_reservation'])['data'];
+  //var_dump($data);
+  //die();
   $email = $data['email'];
   $nom = $data['nom'];
   $object = "Reservation de billet";
@@ -23,8 +21,6 @@ if (isset($_SESSION['client_reservation'])) {//Send Mail to Client
   include('mail_message.php');
 
   $messages = ob_get_clean();
-
-
   // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -58,16 +54,15 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $object;
-    $mail->Body    = $message;
+    $mail->Body    = $messages;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    $mail->send();
-    //$message ="Fin de votre inscription en tant que coach, vous receverez un message sur votre compte email.";
-    //$type="alert-success";
-    //$_SESSION['message']=$message;
-    //$_SESSION['type']= $type;
-    //echo 'Message has been sent';
-    header('Location: index.php?action=reservation&c=' . $res['lastId']);
+    //$mail->send();
+    
+    if($mail->send()){
+      header('Location: index.php?action=reservation&c=' . $res['lastId']);
+      //echo "<script>window.location.assign('index.php?action=reservation&c=' . $id')</script>";
+    }
 } catch (Exception $e) {
     //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
