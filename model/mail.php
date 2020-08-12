@@ -19,7 +19,7 @@ if (isset($_SESSION['client_reservation'])) {//Send Mail to Client
   // Manager::showError($data);
   $email = $data['email'];
   $nom = $data['nom'];
-  $object = "Réservation de billet";
+  $object = "Reservation de billet";
   ob_start();
   include('mail_message.php');
 
@@ -45,7 +45,7 @@ try {
     $mail->setFrom('contact@sonef.net', 'Sonef');
     $mail->addAddress($email, $nom);     // Add a recipient
     //$mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('contact@sonef.net', 'Réservation');
+    $mail->addReplyTo('contact@sonef.net', 'Reservation');
     ob_start();
       include('mail_message.php');
     $messages = ob_get_clean();

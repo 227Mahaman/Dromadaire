@@ -34,7 +34,7 @@
                             <div class="inside-widget">
                                 <h4>Niamey</h4>
                                 <ul>
-                                    <li>Phone: (+227) 20000000 / 89592626</li>
+                                    <li>Phone: (+227) 90901239 / 89592626</li>
                                     <li>Add: Avenue Mali Bero, Niamey-NIGER</li>
                                 </ul>
                             </div>
@@ -49,10 +49,10 @@
                                     <span>Contact</span>
                                     <h2>On est à votre écoute.</h2>
                                 </div>
-                                <form action="#" class="contact-form">
+                                <form action="model/mail_nous_contacter.php" method="post" class="contact-form">
                                     <input name="nom" type="text" placeholder="Nom">
                                     <input type="text" name="email" placeholder="Email">
-                                    <input type="text" placeholder="Website">
+                                    <input type="text" name="object" placeholder="Objet">
                                     <textarea name="message" placeholder="Messages"></textarea>
                                     <button type="submit" class="site-btn">Envoyer</button>
                                 </form>
