@@ -15,7 +15,8 @@ require 'vendor/autoload.php';
 
 if (isset($_SESSION['client_reservation'])) {//Send Mail to Client
   //extract($_POST);
-  $data = Manager::getData("client", "id_client", $_SESSION['client_reservation'], true)['data'];
+  $data = Manager::getData("client", "id_client", $_SESSION['client_reservation'], false)['data'];
+  // Manager::showError($data);
   $email = $data['email'];
   $nom = $data['nom'];
   $object = "Réservation de billet";
@@ -58,7 +59,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $object;
-    $mail->Body    = $message;
+    $mail->Body    = $messages;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
