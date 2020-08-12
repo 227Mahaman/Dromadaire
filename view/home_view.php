@@ -143,8 +143,9 @@ ob_start();
                 </div>
                 <form action="index.php?action=home" method="post" class="filter-form">
                     <div class="first-row">
-                        <select name="depart" id="depart" class="form-control searchable col-lg-3" required>
-                            <option disabled selected>Ville de Départ</option>
+                        <label>Ville de Départ</label>
+                        <select name="depart" id="depart" class="form-control searchable" required>
+                            <!--<option disabled selected>Ville de Départ</option>-->
                             <?php
                             $file = fopen("ville.json", "w+") or die("Can't create file");
                             $sql = "SELECT id_ville, vdepart, vdestination, intitule, pays 
@@ -163,8 +164,10 @@ ob_start();
                             <?php }
                             } ?>
                         </select>
-                        <select name="destination" id="destination" class="form-control searchable destination col-lg-3" required>
-                            <option disabled selected>Ville de Destination</option>
+                        <br>
+                        <label>Ville de Destination</label>
+                        <select name="destination" id="destination" class="form-control searchable destination" required>
+                            <!--<option disabled selected>Ville de Destination</option>-->
                             <?php
                             // die(var_dump($data));
                             if (is_array($data) || is_object($data)) {
@@ -179,8 +182,10 @@ ob_start();
                             <option value="0">Express</option>
                             <option value="1">Climatisé</option>
                         </select> -->
-                        <select name="heure">
-                            <option disabled selected>Heure</option>
+                        <br>
+                        <label>Heure</label>
+                        <select class="form-control" name="heure">
+                            <!--<option disabled selected>Heure</option>-->
                             <!--<option value="00H">00H</option>
                             <option value="01H">01H</option>
                             <option value="02H">02H</option>
@@ -205,7 +210,7 @@ ob_start();
                             <option value="22H">22H</option>
                             <option value="23H">23H</option>-->
                         </select>
-                        <br><br><br><br>
+                        <br>
                     </div>
                     <div class="second-row">
                         <label>Date</label>
