@@ -15,7 +15,7 @@ class Manager
         $user = 'sonef1339852';
         $pass = 'b9K7A3P7t3S7';
         $host = '185.98.131.128';
-        if ($_SERVER["SERVER_NAME"] == 'localhost') {
+        if ($_SERVER["SERVER_NAME"] == 'localhost' || $_SERVER["SERVER_NAME"] == '192.168.43.26') {
             $dbname = 'dromadaire';
             $user = 'root';
             $pass = '';

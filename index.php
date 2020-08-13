@@ -16,9 +16,9 @@ if (!empty($_GET['action'])) {
             //die();
             $reservation = array();
             $reservation['date'] = $data['date'];
-            $reservation['heure'] = $data['heure'];
+            // $reservation['heure'] = $data['heure'];
             unset($data['date']);
-            unset($data['heure']);
+            // unset($data['heure']);
             $manager  = new Manager();
             $res = $manager->insert($data, "billet");
             $database = Manager::bdd();
@@ -43,7 +43,8 @@ if (!empty($_GET['action'])) {
                 $reservation['cout'] = $data['cout'];
                 $reservation['client'] = $datas['id_client'];
                 Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
-                //include_once("model/mail.php");
+
+                $_SESSION['client_reservation'] = $datas['id_client'];
             } else {
 
                 // Manager::showError($data);
