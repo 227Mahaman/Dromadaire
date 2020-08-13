@@ -43,7 +43,7 @@ if (!empty($_GET['action'])) {
                 $reservation['cout'] = $data['cout'];
                 $reservation['client'] = $datas['id_client'];
                 Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
-                header('Location: index.php?action=reservation&c=' . $datas['id_client']);
+                //include_once("model/mail.php");
             } else {
 
                 // Manager::showError($data);
@@ -61,18 +61,17 @@ if (!empty($_GET['action'])) {
                 if (!empty($res['lastId'])) {
                     $reservation['client'] = $res['lastId'];
                     Manager::updateData($reservation, 'reservation', 'id_reservation', $_GET['id']);
-                }
-                if ($res['error'] == false) {
+                //}
+               // if ($res['error'] == false) {
                     $_SESSION['client_reservation'] = $res['lastId'];
-                    include_once("model/mail.php");
-                    //header('Location: index.php?action=reservation&c=' . $res['lastId']);
+                    //include_once("model/mail.php");
                 }
             }
-
-            // $res = $manager->insert($reservation, "reservation");
-            // $res['lastId'] = $database->lastInsertId();
+            include_once("model/mail.php");
         }
         include_once('view/reservation_view.php');
+    } elseif ($action == "reservationc") { //View Reservation notification
+        include_once('view/reservationc_view.php');
     } elseif ($action == "media") { //View Media
         include_once('view/media_view.php');
     } elseif ($action == "service") { //View Nos services

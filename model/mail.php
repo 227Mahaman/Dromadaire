@@ -9,14 +9,14 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 if (isset($_SESSION['client_reservation'])) {//Send Mail to Client
-  //extract($_POST);
-  $id= $_SESSION['client_reservation'];
+  
   $data = Manager::getData("client", "id_client", $_SESSION['client_reservation'])['data'];
-  //var_dump($data);
-  //die();
+  
+  $client = $data['id_client'];
   $email = $data['email'];
   $nom = $data['nom'];
   $object = "Reservation de billet";
+  //$key = 1;
   ob_start();
   include('mail_message.php');
 
@@ -60,8 +60,11 @@ try {
     //$mail->send();
     
     if($mail->send()){
-      header('Location: index.php?action=reservation&c=' . $res['lastId']);
-      //echo "<script>window.location.assign('index.php?action=reservation&c=' . $id')</script>";
+      $i =0;
+      if ($i==0) {
+        $_SESSION['client'] = $client;
+        echo "<script>window.location.assign('index.php?action=reservationc')</script>";
+      }
     }
 } catch (Exception $e) {
     //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
