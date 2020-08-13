@@ -31,18 +31,18 @@ try {
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'contact@sonef.net';                     // SMTP username
     $mail->Password   = 'Mailpr02@20';                               // SMTP password
-    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-    //$mail->SMTPDebug   = 1;
+    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = '465';                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->SMTPDebug   = 1;
     
     //Recipients
     $mail->setFrom('contact@sonef.net', 'Sonef');
     $mail->addAddress($email, $nom);     // Add a recipient
     //$mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('contact@sonef.net', 'Reservation');
-    ob_start();
-      include('mail_message.php');
-    $messages = ob_get_clean();
+    $mail->addReplyTo('contact@sonef.net', 'Sonef');//Adresse de réponse
+    //ob_start();
+     // include('mail_message.php');
+    //$messages = ob_get_clean();
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
 
@@ -56,7 +56,7 @@ try {
     $mail->Body    = $messages;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    $mail->send();
+    //$mail->send();
     
     if($mail->send()){
       $i =0;
