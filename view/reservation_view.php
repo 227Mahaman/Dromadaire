@@ -7,12 +7,12 @@ if (!empty($_GET['id'])) {
     $sql = "SELECT * FROM tarif WHERE vdepart=? AND vdestination=?";
     $data = Manager::getMultiplesRecords($sql, [$billet['depart'], $billet['destination']]);
     //$tarif = Manager::getData("tarif", "id_tarif", $data['id_billet'])['data'];
-} elseif (!empty($_GET['c'])) {
-    $datas = Manager::getData("client", "id_client", $_GET['c'])['data'];
-    if ($datas['is_account'] == 1) {
-        $_SESSION['client'] = $datas;
-    }
-}
+} //elseif (!empty($_GET['c'])) {
+//     $datas = Manager::getData("client", "id_client", $_GET['c'])['data'];
+//     if ($datas['is_account'] == 1) {
+//         $_SESSION['client'] = $datas;
+//     }
+// }
 ob_start();
 ?>
 
@@ -150,67 +150,38 @@ ob_start();
                     </div>
                     <div class="home-text">
                         <i class="fa fa-home"></i>
-                        <?php if (!empty($_GET['id'])) { ?>
                             Reservation | Complement d'Information
-                        <?php } elseif (!empty($_GET['c'])) { ?>
-                            Reservation finalisée
-                        <?php } ?>
                     </div>
                 </div>
                 <form method="post" id="form" class="filter-form">
                     <div class="first-row">
-                        <?php if (!empty($_GET['id'])) { ?>
-                            <?php if (is_array($data) || is_object($data)) {
-                                foreach ($data as $value) { ?>
-                                    <h5> Tarif: <?= $value['valeur'] ?> FCFA</h5>
+                        <?php if (is_array($data) || is_object($data)) {
+                            foreach ($data as $value) { ?>
+                                <h5> Tarif: <?= $value['valeur'] ?> FCFA</h5>
 
-                                    <br>
-                                    <input type="text" class="form-control" name="nom" placeholder="Nom du client" required>
-                                    <br>
-                                    <input type="text" class="form-control" name="prenom" placeholder="Prénom du client" required>
-                                    <br>
-                                    <input type="tel" class="form-control" name="tel" placeholder="(+227)93939393" required>
-                                    <br>
-                                    <input type="mail" class="form-control" name="email" placeholder="aaaaa@aaaa.com">
-                                    <br>
-                                    <input type="number" class="form-control" name="place" id="place" value="1">
-                                    <br>
-                                    <input type="text" class="form-control" name="cout" id="cout" value="<?= $value['valeur'] ?>">
-                                    <br>
-                                    <div style="display: flex;">
-                                        <label for="is_account">Créer un compte pour bénéficier d'un espace client</label>
-                                        <input style="width: 5%; height: 20px;" type="checkbox" class="form-control" name="is_account" id="is_account" value="1">
-                                    </div>
-                            <?php }
-                            } ?>
+                                <br>
+                                <input type="text" class="form-control" name="nom" placeholder="Nom du client" required>
+                                <br>
+                                <input type="text" class="form-control" name="prenom" placeholder="Prénom du client" required>
+                                <br>
+                                <input type="tel" class="form-control" name="tel" placeholder="(+227)93939393" required>
+                                <br>
+                                <input type="mail" class="form-control" name="email" placeholder="aaaaa@aaaa.com">
+                                <br>
+                                <input type="number" class="form-control" name="place" id="place" value="1">
+                                <br>
+                                <input type="text" class="form-control" name="cout" id="cout" value="<?= $value['valeur'] ?>" disabled>
+                                <br>
+                                <div style="display: flex;">
+                                    <label for="is_account">Créer un compte pour bénéficier d'un espace client</label>
+                                    <input style="width: 5%; height: 20px;" type="checkbox" class="form-control" name="is_account" id="is_account" value="1">
+                                </div>
+                        <?php } } ?>
 
                             <br>
-                        <?php } elseif (!empty($_GET['c'])) { ?>
-                            <h5>Félicition,</h5>
-                            <h3><?= $datas['nom'] . ' - ' . $datas['prenom'] ?></h3>
-                            <br>
-                            <p>N'oubliez pas de passer au Billeterie pour récuperer votre billet.<p>
-                                    <br>
-                                    <p>Vous pouvez aussi voir l'ensemble de vos réservations sur l'espace client.</p>
-                                    <br>
-                                <?php } ?>
                     </div>
                     <div class="second-row">
-                        <!--<div class="form-group">
-                                <input type="text" class="form-control" name="" placeholder="Nom">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="" placeholder="Prénom">
-                            </div>
-                            <div class="form-group">
-                                <input type="mail" class="form-control" name="" placeholder="aaaaa@aaaa.com">
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-control" name="" placeholder="(+227)00000000">
-                            </div>-->
-                        <?php if (!empty($_GET['id'])) { ?>
                             <button type="submit" class="search-btn">Réserver</button>
-                        <?php } ?>
                     </div>
                 </form>
             </div>
