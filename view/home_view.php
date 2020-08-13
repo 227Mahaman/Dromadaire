@@ -182,9 +182,9 @@ ob_start();
                             <option value="0">Express</option>
                             <option value="1">Climatisé</option>
                         </select> -->
-                        <br>
+                        <!-- <br>
                         <label>Heure</label>
-                        <select class="form-control" name="heure">
+                        <select class="form-control" name="heure"> -->
                             <!--<option disabled selected>Heure</option>-->
                             <!--<option value="00H">00H</option>
                             <option value="01H">01H</option>
@@ -192,9 +192,9 @@ ob_start();
                             <option value="03H">03H</option>
                             <option value="04H">04H</option>
                             <option value="05H">05H</option>-->
-                            <option value="06H">O6H</option>
+                            <!-- <option value="06H">O6H</option> -->
                             <!--<option value="07H">07H</option>-->
-                            <option value="08H">O8H</option>
+                            <!-- <option value="08H">O8H</option> -->
                             <!--<option value="09H">09H</option>
                             <option value="10H">10H</option>
                             <option value="11H">11H</option>
@@ -209,7 +209,7 @@ ob_start();
                             <option value="21H">21H</option>
                             <option value="22H">22H</option>
                             <option value="23H">23H</option>-->
-                        </select>
+                        <!-- </select> -->
                         <br>
                     </div>
                     <div class="second-row">

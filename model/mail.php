@@ -57,12 +57,12 @@ try {
     $mail->Body    = $messages;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    //$mail->send();
+    $mail->send();
     
-    if($mail->send()){
-      header('Location: index.php?action=reservation&c=' . $res['lastId']);
-      //echo "<script>window.location.assign('index.php?action=reservation&c=' . $id')</script>";
-    }
+    // if($mail->send()){
+      // header('Location: index.php?action=reservation&c=' . $res['lastId']);
+      echo "<script>window.location.assign('index.php?action=reservation&c=' . $id')</script>";
+    // }
 } catch (Exception $e) {
     //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
