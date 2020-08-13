@@ -47,7 +47,7 @@
                             <div class="contact-text">
                                 <div class="section-title">
                                     <span>Contact</span>
-                                    <h2>On est à votre écoute.</h2>
+                                    <h2>Nous sommes à votre écoute.</h2>
                                 </div>
                                 <form action="model/mail_nous_contacter.php" method="post" class="contact-form">
                                     <input name="nom" type="text" placeholder="Nom">

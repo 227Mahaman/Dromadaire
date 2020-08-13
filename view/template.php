@@ -330,7 +330,8 @@ if (!empty($_POST)) {
 
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/jquery.magnific-popup.min.js"></script>
-    <script src="public/js/jquery.nice-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <!--<script src="public/js/jquery.nice-select.min.js"></script>-->
     <script src="public/js/jquery.slicknav.js"></script>
     <script src="public/js/jquery-ui.min.js"></script>
     <script src="public/js/owl.carousel.min.js"></script>
