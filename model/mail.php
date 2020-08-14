@@ -33,7 +33,7 @@ try {
     $mail->Password   = 'Mailpr02@20';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = '465';                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-    $mail->SMTPDebug   = 1;
+    //$mail->SMTPDebug   = 1;
     
     //Recipients
     $mail->setFrom('contact@sonef.net', 'Sonef');
