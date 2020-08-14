@@ -14,6 +14,13 @@
                             <span>Contact</span>
                         </div>
                     </div>
+                    <?php //Notification
+                    if (!empty($_SESSION['messages']) && $_SESSION['mail']==0) {
+                        echo Manager::messages($_SESSION['messages'], 'alert-danger');
+                    } elseif(!empty($_SESSION['messages']) && $_SESSION['mail']==1){
+                        echo Manager::messages($_SESSION['messages'], 'alert-success');
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -49,7 +56,7 @@
                                     <span>Contact</span>
                                     <h2>Nous sommes à votre écoute.</h2>
                                 </div>
-                                <form action="model/mail_nous_contacter.php" method="post" class="contact-form">
+                                <form method="post" class="contact-form">
                                     <input name="nom" type="text" placeholder="Nom">
                                     <input type="text" name="email" placeholder="Email">
                                     <input type="text" name="object" placeholder="Objet">

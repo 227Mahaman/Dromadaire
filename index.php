@@ -82,6 +82,14 @@ if (!empty($_GET['action'])) {
     } elseif ($action == "agence") { //View Agence
         include_once('view/agence_view.php');
     } elseif ($action == "contact") { //View Contact
+        if($_POST){//ENvoi de mail et notification
+            include_once('model/mail_nous_contacter.php');
+            if(isset($_SESSION['mail']) && $_SESSION['mail'] == 0){
+                $_SESSION['messages'] = "Erreur, votre email n'a pas été envoyer!";
+            } elseif(isset($_SESSION['mail']) && $_SESSION['mail'] == 1){
+                $_SESSION['messages'] = "Votre email a bien été envoyer!";
+            }
+        }
         include_once('view/contact_view.php');
     } elseif ($action == "login") { //View login
         if (!empty($_POST)) {

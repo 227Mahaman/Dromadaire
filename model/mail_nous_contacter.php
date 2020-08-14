@@ -38,12 +38,13 @@ $headers  = "MIME-Version: 1.0 \n";
 
    $CR_Mail = @mail ($to, $Subject, $mail_Data, $headers);
  
-   if ($CR_Mail === FALSE)   echo " ### CR_Mail=$CR_Mail - Erreur envoi mail 
- \n";
-   else       {
-  
-    echo " *** CR_Mail=$CR_Mail - Mail envoyé \n";
-    header("Location:index.php?action=home");
+   if ($CR_Mail === FALSE) {  //echo " ### CR_Mail=$CR_Mail - Erreur envoi mail \n";
+    //header("Location:index.php?action=notification");
+    $_SESSION['mail'] = 0;
+   } else {
+    $_SESSION['mail'] = 1;
+    //echo " *** CR_Mail=$CR_Mail - Mail envoyé \n";
+    //header("Location:index.php?action=home");
   }               
 }
   
