@@ -170,7 +170,8 @@ ob_start();
                                 <br>
                                 <input type="number" class="form-control" name="place" id="place" value="1">
                                 <br>
-                                <input type="text" class="form-control" name="cout" id="cout" value="<?= $value['valeur'] ?>" disabled>
+                                <input type="hidden" class="form-control" name="cout" id="cout" value="<?= $value['valeur'] ?>" >
+                                <input type="text" class="form-control" name="coute" id="coute" value="<?= $value['valeur'] ?>" disabled>
                                 <br>
                                 <div style="display: flex;">
                                     <label for="is_account">Créer un compte pour bénéficier d'un espace client</label>
@@ -194,6 +195,7 @@ ob_start();
     $("#place").on("change", function() {
         var place = $(this).val();
         // console.log(place, cout);
+        $("#coute").val(cout * place);
         $("#cout").val(cout * place);
     });
     // $("#valider").click(function() {

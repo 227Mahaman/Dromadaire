@@ -36,7 +36,10 @@ if (!empty($_GET['action'])) {
     } elseif ($action == "reservation") { //View Etape 2 de la Reservation
         if ($_POST) {
             $data = $_POST;
-            $datas = Manager::getData("client", "tel", $data['tel'])['data'];
+            unset($data['coute']);
+            $sql = "SELECT * FROM client WHERE tel = ? AND is_account='1'";
+            $datas = Manager::getSingleRecords($sql, [$data['tel']]);
+            // $datas = Manager::getData("client", "tel", $data['tel'])['data'];
             if (!empty($datas['is_account']) && $datas['is_account'] == 1) {
                 $reservation = array();
                 $reservation['place'] = $data['place'];
