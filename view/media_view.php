@@ -44,7 +44,7 @@ ob_start();
                         </div>
                         <div class="sb-text">
                             <ul>
-                                <li><i class="fa fa-user"></i> <?= $admin['first_name'] . ' '. $admin['last_name'];?></li>
+                                <!--<li><i class="fa fa-user"></i> <?//= $admin['first_name'] . ' '. $admin['last_name'];?></li>-->
                                 <li><i class="fa fa-clock-o"></i> <?= $value['created_at']?></li>
                             </ul>
                             <h4><a href="#"><?= $value['intitule_post']?></a></h4>
