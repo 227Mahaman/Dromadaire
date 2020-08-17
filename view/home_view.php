@@ -166,7 +166,7 @@ ob_start();
                         </select>
                         <br>
                         <label>Ville de Destination</label>
-                        <select name="destination" id="destination" class="form-control searchable destination" required>
+                        <select name="destination" id="destination" class="form-control destination" required>
                             <!--<option disabled selected>Ville de Destination</option>-->
                             <?php
                             // die(var_dump($data));
@@ -969,18 +969,18 @@ ob_start();
         console.log($(this).val(), 'des')
         v = $(this).val();
         $.getJSON("ville.json", function(data) {
-            var option = '<div class="option" data-selectable selected>Ville de Destination</div>';
+            var option = '<option class="option" selected>Ville de Destination</option>';
             $.each(data, function(key, val) {
                 // console.log(key, val, "ok villes");
                 if (val.vdepart == v) {
                     console.log(key, val, "ok ville");
 
-                    option += '<div class="option" data-selectable data-value="' + val.id_ville + '">' + val.intitule + '</div>';
+                    option += '<option value="' + val.id_ville + '">' + val.intitule + '</option>';
                 }
             });
             console.log(option);
 
-            // $(".destination>.selectize-dropdown>.selectize-dropdown-content").html(option);
+            $("#destination").html(option);
         });
     });
 </script>
