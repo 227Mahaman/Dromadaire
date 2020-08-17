@@ -172,6 +172,7 @@ ob_start();
                                 <input type="mail" class="form-control" name="email" placeholder="aaaaa@aaaa.com">
                                 <small>Obligatoire (*)</small>
                                 <br>
+                                <label>Nombre de place</label>
                                 <input type="number" class="form-control" name="place" id="place" value="1">
                                 <br>
                                 <input type="hidden" class="form-control" name="cout" id="cout" value="<?= $value['valeur'] ?>" >
