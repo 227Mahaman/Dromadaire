@@ -969,18 +969,18 @@ ob_start();
         console.log($(this).val(), 'des')
         v = $(this).val();
         $.getJSON("ville.json", function(data) {
-            var option = '<option selected>Ville de Destination</option>';
+            var option = '<div class="option" data-selectable selected>Ville de Destination</div>';
             $.each(data, function(key, val) {
-                console.log(key, val, "ok villes");
+                // console.log(key, val, "ok villes");
                 if (val.vdepart == v) {
                     console.log(key, val, "ok ville");
 
-                    option += '<option value="' + val.id_ville + '">' + val.intitule + '</option>';
+                    option += '<div class="option" data-selectable data-value="' + val.id_ville + '">' + val.intitule + '</div>';
                 }
             });
             console.log(option);
 
-            $("#destination").html(option);
+            // $(".destination>.selectize-dropdown>.selectize-dropdown-content").html(option);
         });
     });
 </script>
