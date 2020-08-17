@@ -164,6 +164,7 @@ ob_start();
                             <?php }
                             } ?>
                         </select>
+                        <small>Obligatoire (*)</small>
                         <br>
                         <label>Ville de Destination</label>
                         <select name="destination" id="destination" class="form-control searchable destination" required>
@@ -177,6 +178,7 @@ ob_start();
                             <?php }
                             } ?>
                         </select>
+                        <small>Obligatoire (*)</small>
                         <!-- <select name="bus" required>
                             <option disabled selected>Bus</option>
                             <option value="0">Express</option>
@@ -215,6 +217,7 @@ ob_start();
                     <div class="second-row">
                         <label>Date</label>
                         <input type="date" class="form-control" name="date" required>
+                        <small>Obligatoire (*)</small>
                         <br>
                         <!--<div class="form-group">
                                 <input type="text" class="form-control" name="" placeholder="Nom">

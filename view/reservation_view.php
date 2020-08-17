@@ -161,12 +161,16 @@ ob_start();
 
                                 <br>
                                 <input type="text" class="form-control" name="nom" placeholder="Nom du client" required>
+                                <small>Obligatoire (*)</small>
                                 <br>
                                 <input type="text" class="form-control" name="prenom" placeholder="Prénom du client" required>
+                                <small>Obligatoire (*)</small>
                                 <br>
                                 <input type="tel" class="form-control" name="tel" placeholder="(+227)93939393" required>
+                                <small>Obligatoire (*)</small>
                                 <br>
                                 <input type="mail" class="form-control" name="email" placeholder="aaaaa@aaaa.com">
+                                <small>Obligatoire (*)</small>
                                 <br>
                                 <input type="number" class="form-control" name="place" id="place" value="1">
                                 <br>
