@@ -167,7 +167,7 @@ ob_start();
                         <small>Obligatoire (*)</small>
                         <br>
                         <label>Ville de Destination</label>
-                        <select name="destination" id="destination" class="form-control searchable destination" required>
+                        <select name="destination" id="destination" class="form-control destination" required>
                             <!--<option disabled selected>Ville de Destination</option>-->
                             <?php
                             // die(var_dump($data));
@@ -972,18 +972,18 @@ ob_start();
         console.log($(this).val(), 'des')
         v = $(this).val();
         $.getJSON("ville.json", function(data) {
-            var option = '<span class="current">Ville de Destination</span>';
+            var option = '<option class="option" selected>Ville de Destination</option>';
             $.each(data, function(key, val) {
-                console.log(key, val, "ok villes");
+                // console.log(key, val, "ok villes");
                 if (val.vdepart == v) {
                     console.log(key, val, "ok ville");
 
-                    option += '<li data-value="' + val.id_ville + '" class="option">' + val.intitule + '</li>';
+                    option += '<option value="' + val.id_ville + '">' + val.intitule + '</option>';
                 }
             });
             console.log(option);
 
-            $(".destination>.list").html(option);
+            $("#destination").html(option);
         });
     });
 </script>

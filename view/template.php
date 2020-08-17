@@ -21,6 +21,7 @@ if (!empty($_POST)) {
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
@@ -330,13 +331,24 @@ if (!empty($_POST)) {
 
     <script src="public/js/bootstrap.min.js"></script>
     <script src="public/js/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
     <!--<script src="public/js/jquery.nice-select.min.js"></script>-->
     <script src="public/js/jquery.slicknav.js"></script>
     <script src="public/js/jquery-ui.min.js"></script>
     <script src="public/js/owl.carousel.min.js"></script>
     <script src="public/js/main.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        $('.searchable').selectize({
+        sortField: 'text'
+      });
+
+      var eventHandler = function() {
+        return function() {
+          console.log($select.val());
+        };
+      };
+    </script>
 </body>
 
 </html>
