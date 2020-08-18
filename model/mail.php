@@ -62,7 +62,7 @@ try {
       $i =0;
       if ($i==0) {
         $_SESSION['client'] = $client;
-        // echo "<script>window.location.assign('index.php?action=reservationc')</script>";
+        echo "<script>window.location.assign('index.php?action=reservationc')</script>";
       }
     }
 
