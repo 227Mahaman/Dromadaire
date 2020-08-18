@@ -39,7 +39,7 @@ try {
     $mail->setFrom('contact@sonef.net', 'Sonef');
     $mail->addAddress($email, $nom);     // Add a recipient
     //$mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('contact@sonef.net', 'Sonef');//Adresse de réponse
+    //$mail->addReplyTo('contact@sonef.net', 'Sonef');//Adresse de réponse
     //ob_start();
      // include('mail_message.php');
     //$messages = ob_get_clean();
