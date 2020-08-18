@@ -30,7 +30,7 @@ try {
     $mail->Host       = 'mail34.lwspanel.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'contact@sonef.net';                     // SMTP username
-    $mail->Password   = 'Mailpr02@20';                               // SMTP password
+    $mail->Password   = '$onef@M@ail2@';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = '465';                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
     //$mail->SMTPDebug   = 1;
