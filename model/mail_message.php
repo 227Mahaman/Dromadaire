@@ -6,7 +6,7 @@
     <title>Sonef</title>
 </head>
 <body>
-<p>Bonjour</p> 
+<p>Bonjour cher client,</p> 
 
 <p>Votre réservation a bien été enregistrée, passez au siège <b>Sonef</b> pour récupérer votre billet.</p>
 
