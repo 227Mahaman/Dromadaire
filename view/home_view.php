@@ -3,7 +3,7 @@ $title = "Accueil";
 $agences = Manager::Count('agence', 'id_agence');
 $employes = Manager::Count('employes', 'id_employe');
 $bus = Manager::Count('bus', 'id_bus');
-$garages = Manager::Count('garage', 'id_garage');
+$garages = Manager::Count('garages', 'id_garage');
 ob_start();
 ?>
 
