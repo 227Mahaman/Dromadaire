@@ -3,7 +3,7 @@ $title = "Accueil";
 $agences = Manager::Count('agence', 'id_agence');
 $employes = Manager::Count('employes', 'id_employe');
 $bus = Manager::Count('bus', 'id_bus');
-$agences = Manager::Count('agence', 'id_agence');
+$garages = Manager::Count('garage', 'id_garage');
 ob_start();
 ?>
 
@@ -36,7 +36,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
-                                    <p>8 Garages</p>
+                                    <p><?= $garages['total'] ?> Garages</p>
                                 </li>
                             </ul>
                         </div>
@@ -70,7 +70,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
-                                    <p>8 Garages</p>
+                                    <p><?= $garages['total'] ?> Garages</p>
                                 </li>
                             </ul>
                         </div>
@@ -104,7 +104,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
-                                    <p>8 Garages</p>
+                                    <p><?= $garages['total'] ?> Garages</p>
                                 </li>
                             </ul>
                         </div>
