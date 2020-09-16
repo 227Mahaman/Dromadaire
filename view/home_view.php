@@ -2,7 +2,7 @@
 $title = "Accueil";
 $agences = Manager::Count('agence', 'id_agence');
 $employes = Manager::Count('employes', 'id_employe');
-$agences = Manager::Count('agence', 'id_agence');
+$bus = Manager::Count('bus', 'id_bus');
 $agences = Manager::Count('agence', 'id_agence');
 ob_start();
 ?>
@@ -32,7 +32,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
-                                    <p>120 Bus</p>
+                                    <p><?= $bus['total'] ?> Bus</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
@@ -66,7 +66,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
-                                    <p>120 Bus</p>
+                                    <p><?= $bus['total'] ?> Bus</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
@@ -100,7 +100,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
-                                    <p>120 Bus</p>
+                                    <p><?= $bus['total'] ?> Bus</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
