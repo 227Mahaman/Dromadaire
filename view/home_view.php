@@ -1,6 +1,9 @@
 <?php
 $title = "Accueil";
 $agences = Manager::Count('agence', 'id_agence');
+$employes = Manager::Count('employes', 'id_employe');
+$agences = Manager::Count('agence', 'id_agence');
+$agences = Manager::Count('agence', 'id_agence');
 ob_start();
 ?>
 
@@ -25,7 +28,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-user"></i>
-                                    <p> 500 employés</p>
+                                    <p><?= $employes['total'] ?> employés</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
@@ -59,7 +62,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-user"></i>
-                                    <p> 500 employés</p>
+                                    <p><?= $employes['total'] ?> employés</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
@@ -93,7 +96,7 @@ ob_start();
                                 </li>
                                 <li>
                                     <i class="fa fa-user"></i>
-                                    <p> 500 employés</p>
+                                    <p><?= $employes['total'] ?> employés</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
