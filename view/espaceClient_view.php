@@ -209,7 +209,7 @@ ob_start();
 			<div class="card">
 				<div class="card-header">
 					<div style="background-color: #fff;" class="profile_pic">
-						<img src="public/img/logo/Logo-sonef.png">
+						<img src="public/img/logo/Logo-sonef.png" alt="logo sonef">
 					</div>
 				</div>
 				<div class="card-body">

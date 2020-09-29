@@ -94,7 +94,7 @@
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-						<img src="public/img/logo/Logo-sonef.png" style="background-color: #fff;" class="brand_logo" alt="Logo">
+						<img src="public/img/logo/Logo-sonef.png" style="background-color: #fff;" class="brand_logo" alt="Logo sonef">
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">

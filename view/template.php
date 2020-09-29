@@ -7,12 +7,12 @@ if (!empty($_POST)) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Azenta Template">
-    <meta name="keywords" content="Azenta, unica, creative, html">
+    <meta name="description" content="Sonef Transport voyageur au Niger & Afrique de l'Ouest">
+    <meta name="keywords" content="Sonef, Transport, voyageur, Niger, Afrique, Afrique de l'Ouest, Bus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= $title; ?></title>

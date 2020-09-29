@@ -131,7 +131,7 @@ ob_start();
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="property-pic">
-                                            <img src="<?= $target . Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="">
+                                            <img src="<?= $target . Manager::getData("files", "id", $value['file'])['data']['file_url'] ?>" alt="<?= $ville['intitule'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-8 row">

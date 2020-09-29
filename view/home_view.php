@@ -116,13 +116,13 @@ ob_start();
     <div class="thumbnail-pic">
         <div class="thumbs owl-carousel">
             <div class="item">
-                <img src="public/img/banniere/6.jpg" alt="">
+                <img src="public/img/banniere/6.jpg" alt="banière sonef">
             </div>
             <div class="item">
-                <img src="public/img/banniere/8.jpeg" alt="">
+                <img src="public/img/banniere/8.jpeg" alt="banière sonef">
             </div>
             <div class="item">
-                <img src="public/img/banniere/3.jpg" alt="">
+                <img src="public/img/banniere/3.jpg" alt="banière sonef">
             </div>
         </div>
     </div>
