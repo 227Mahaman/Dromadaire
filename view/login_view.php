@@ -53,7 +53,8 @@
 			margin-top: 100px;
 		}
 		.login_btn {
-			font-size: larger;
+			font-size: 20px;
+			margin-bottom: 10px;
 			width: 100%;
 			background: #c0392b !important;
 			color: white !important;
