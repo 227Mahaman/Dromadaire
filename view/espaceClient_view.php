@@ -75,7 +75,7 @@ ob_start();
 	}
 
 	.name {
-		font-size: 20px;
+		font-size: 25px;
 		font-weight: 700;
 		color: gray;
 		position: relative;
@@ -95,7 +95,7 @@ ob_start();
 	.address {
 		display: flex;
 		justify-content: center;
-		font-size: 12px;
+		font-size: 18px;
 		color: gray;
 	}
 
@@ -141,7 +141,7 @@ ob_start();
 
 	.info p:first-child {
 		margin-bottom: 0;
-		font-size: 12px;
+		font-size: 20px;
 		color: gray;
 		text-transform: uppercase;
 		text-align: center;
@@ -149,7 +149,7 @@ ob_start();
 
 	.info p:last-child {
 		margin-bottom: 0;
-		font-size: 20px;
+		font-size: 25px;
 		font-weight: 700;
 		color: gray;
 		text-transform: uppercase;
