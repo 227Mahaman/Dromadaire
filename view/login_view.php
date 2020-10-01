@@ -84,7 +84,7 @@
 </head>
 <!--Coded with love by Mutiullah Samim-->
 <body>
-	<div class="container h-100">
+	<div class="container">
 		<?php
 		 if (!empty($_SESSION['messages'])) {
            
@@ -92,7 +92,7 @@
             
           }
 		?>
-		<div class="d-flex justify-content-center h-100">
+		<div class="d-flex justify-content-center">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
