@@ -818,7 +818,7 @@ ob_start();
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <span>Le plaisir de voyage</span>
+                    <span>Le plaisir de voyager</span>
                     <h2>Nos Agences</h2>
                 </div>
             </div>
