@@ -16,7 +16,7 @@ ob_start();
                     <div class="col-lg-8 offset-lg-2">
                         <div class="hero-text">
                             <p class="room-location"><i class="icon_pin"></i> Avenue Mali Bero, Niamey-NIGER</p>
-                            <h2>Le plaisir de voyage</h2>
+                            <h2>Le plaisir de voyager</h2>
                             <div class="room-price">
                                 <span>24H/24H --</span>
                                 <p>7j/7j</p>
@@ -50,7 +50,7 @@ ob_start();
                     <div class="col-lg-8 offset-lg-2">
                         <div class="hero-text">
                             <p class="room-location"><i class="icon_pin"></i> Avenue Mali Bero, Niamey-NIGER</p>
-                            <h2>Le plaisir de voyage</h2>
+                            <h2>Le plaisir de voyager</h2>
                             <div class="room-price">
                                 <span>24H/24H --</span>
                                 <p>7j/7j</p>
@@ -84,7 +84,7 @@ ob_start();
                     <div class="col-lg-8 offset-lg-2">
                         <div class="hero-text">
                             <p class="room-location"><i class="icon_pin"></i> Avenue Mali Bero, Niamey-NIGER</p>
-                            <h2>Le plaisir de voyage</h2>
+                            <h2>Le plaisir de voyager</h2>
                             <div class="room-price">
                                 <span>24H/24H --</span>
                                 <p>7j/7j</p>
