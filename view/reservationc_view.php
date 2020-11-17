@@ -27,19 +27,19 @@ ob_start();
                             <ul class="room-features">
                                 <li>
                                     <i class="fa fa-home"></i>
-                                    <p>20 Agences</p>
+                                    <p><?= $agences['total'] ?> Agences</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-user"></i>
-                                    <p> 500 employés</p>
+                                    <p><?= $employes['total'] ?> employés</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
-                                    <p>120 Bus</p>
+                                    <p><?= $bus['total'] ?>  Bus</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
-                                    <p>8 Garages</p>
+                                    <p><?= $garages['total'] ?> Garages</p>
                                 </li>
                             </ul>
                         </div>
@@ -61,19 +61,19 @@ ob_start();
                             <ul class="room-features">
                                 <li>
                                     <i class="fa fa-home"></i>
-                                    <p>20 Agences</p>
+                                    <p><?= $agences['total'] ?> Agences</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-user"></i>
-                                    <p> 500 employés</p>
+                                    <p><?= $employes['total'] ?> employés</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
-                                    <p>120 Bus</p>
+                                    <p><?= $bus['total'] ?> Bus</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
-                                    <p>8 Garages</p>
+                                    <p><?= $garages['total'] ?> Garages</p>
                                 </li>
                             </ul>
                         </div>
@@ -95,19 +95,19 @@ ob_start();
                             <ul class="room-features">
                                 <li>
                                     <i class="fa fa-home"></i>
-                                    <p>20 Agences</p>
+                                    <p><?= $agences['total'] ?> Agences</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-user"></i>
-                                    <p> 500 employés</p>
+                                    <p><?= $employes['total'] ?> employés</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-bus"></i>
-                                    <p>120 Bus</p>
+                                    <p><?= $bus['total'] ?>  Bus</p>
                                 </li>
                                 <li>
                                     <i class="fa fa-car"></i>
-                                    <p>8 Garages</p>
+                                    <p><?= $garages['total'] ?> Garages</p>
                                 </li>
                             </ul>
                         </div>
@@ -119,13 +119,13 @@ ob_start();
     <div class="thumbnail-pic">
         <div class="thumbs owl-carousel">
             <div class="item">
-                <img src="public/img/banniere/6.jpg" alt="">
+                <img src="public/img/banniere/6.jpg" alt="bannière sonef">
             </div>
             <div class="item">
-                <img src="public/img/banniere/8.jpeg" alt="">
+                <img src="public/img/banniere/8.jpeg" alt="bannière sonef">
             </div>
             <div class="item">
-                <img src="public/img/banniere/3.jpg" alt="">
+                <img src="public/img/banniere/3.jpg" alt="bannière sonef">
             </div>
         </div>
     </div>
