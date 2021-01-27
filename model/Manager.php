@@ -39,7 +39,7 @@ class Manager
         $req = self::bdd()->prepare($sql);
         if (!empty($params)) { // parameters must exist before you call bind_param() method
             $req->execute($params);
-        }else {
+        } else {
             $req->execute();
         }
         if ($res = $req->fetchAll(PDO::FETCH_ASSOC)) {
@@ -48,14 +48,12 @@ class Manager
     }
 
 
-    public static function getSingleRecords($sql, $params)
+    public static function getSingleRecords($sql, $params = [])
     {
-        $req =self::bdd()->prepare($sql);
-        if (!empty($params)) { // parameters must exist before you call bind_param() method
-            $req->execute($params);
-        }else {
-            return self::bdd()->query($sql);
-        }        
+        $req = self::bdd()->prepare($sql);
+
+        $req->execute($params);
+
         if ($res = $req->fetch(PDO::FETCH_ASSOC)) {
             return $res;
         }
@@ -142,7 +140,7 @@ class Manager
         if ($res != 1) {
             return $res;
         }
-       // print_r($data); die;
+        // print_r($data); die;
         $res = self::file_post_contents($url, $data);
         return $res;
     }
@@ -427,7 +425,7 @@ class Manager
     //                     $sql .= ":$key)";
     //                 }
     //             }
-    
+
     //             $req = self::bdd()->prepare($sql);
     //             //if ($this->is_not_empty($table)) {
     //                 try {
@@ -449,7 +447,7 @@ class Manager
         $table = get_object_vars($object);
         $table_name = "files";
         //$table = $table[$table_name];
-    //    var_dump($table); die($table_name);
+        //    var_dump($table); die($table_name);
         if (is_array($table) || is_object($table)) {
             if (count($table) > 0) {
                 end($table);
@@ -470,16 +468,16 @@ class Manager
                         $sql .= ":$key)";
                     }
                 }
-    
+
                 $req = self::bdd()->prepare($sql);
                 //if ($this->is_not_empty($table)) {
-                    try {
-                        $req->execute($table);
-                        $lastId = self::bdd()->lastInsertId();
-                        return $this->throwError(1, "Enregistrement effectué avec succès", false, $lastId);
-                    } catch (PDOException $e) {
-                        return $this->throwError(0, "Enregistrement échoué; $e", true);
-                    }
+                try {
+                    $req->execute($table);
+                    $lastId = self::bdd()->lastInsertId();
+                    return $this->throwError(1, "Enregistrement effectué avec succès", false, $lastId);
+                } catch (PDOException $e) {
+                    return $this->throwError(0, "Enregistrement échoué; $e", true);
+                }
                 // } else {
                 //     return $this->throwError(0, "Un ou plusieurs champs mal renseigner", true);
                 // }
@@ -555,7 +553,7 @@ class Manager
         }
     }
 
-     /**
+    /**
      * update data
      * 
      * @return void
@@ -563,8 +561,9 @@ class Manager
     public static function update($object)
     {
         if (!function_exists('array_key_first')) {
-            function array_key_first(array $arr) {
-                foreach($arr as $key => $unused) {
+            function array_key_first(array $arr)
+            {
+                foreach ($arr as $key => $unused) {
                     return $key;
                 }
                 return NULL;
@@ -573,16 +572,16 @@ class Manager
         // recupération de propriété de nom de l'objet
         $table = get_object_vars($object);
         $table_name = strtolower(get_class($object));
-        
+
         // on enlève la propriété dont la valeur est null
         foreach ($table as $key => $value) {
-            if ($table[$key]==null) {
+            if ($table[$key] == null) {
                 unset($table[$key]);
             }
         }
 
         //on recupère le id de la table
-        $id= array_key_first($table);
+        $id = array_key_first($table);
 
         // realisation de la requête
         if (count($table) > 0) {
@@ -590,7 +589,7 @@ class Manager
             $last_key = end($temp);
             $sql = "UPDATE $table_name SET ";
             foreach ($table as $key => $field) {
-                
+
                 if ($last_key != $key) {
                     $sql .= "$key=:$key, ";
                 } else {
@@ -608,7 +607,7 @@ class Manager
         }
     }
 
-     /**
+    /**
      * update data
      * 
      * @return void
@@ -646,9 +645,10 @@ class Manager
      * @param String table
      * @param Int id de la table
      */
-    public static function Count($table, $id, $proprety=null, $value=null, $regroupe=null){
+    public static function Count($table, $id, $proprety = null, $value = null, $regroupe = null)
+    {
         $query = "SELECT COUNT($id) as total FROM $table ";
-        if($proprety!=null && $value!=null){
+        if ($proprety != null && $value != null) {
             $query .= "WHERE $proprety=:$proprety";
             if (!is_null($regroupe)) {
                 $query .= "GROUP BY $regroupe";
@@ -658,20 +658,19 @@ class Manager
             if ($res = $req->fetch(PDO::FETCH_ASSOC)) {
                 return $res;
             }
-        } else{
+        } else {
             $req = self::bdd()->query($query);
             if ($res = $req->fetch(PDO::FETCH_ASSOC)) {
                 return $res;
             }
         }
-        
     }
 
     public static function updateDataSingle($proprety, $value, $table, $property, $val)
     {
         $sql = "UPDATE $table SET $proprety=:$proprety WHERE $property=:$property";
         $req = self::bdd()->prepare($sql);
-        if ($req->execute([$proprety=> $value, $property=>$val])) {
+        if ($req->execute([$proprety => $value, $property => $val])) {
             self::throwError(200, "Enregistrement modifié avec succès");
         } else {
             self::throwError(503, "modification échouée", true);
@@ -692,7 +691,7 @@ class Manager
                         $req->bindValue(":$key", $value, PDO::PARAM_BOOL);
                     }
                 }
-            }else {
+            } else {
                 return $data;
             }
             return true;
@@ -709,9 +708,8 @@ class Manager
                 $data_is_slash[$key] = trim(htmlspecialchars(addslashes($value)));
             }
             return $data_is_slash;
-        }else {
+        } else {
             return false;
         }
     }
-
 }

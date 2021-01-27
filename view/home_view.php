@@ -4,13 +4,22 @@ $agences = Manager::Count('agence', 'id_agence');
 $employes = Manager::Count('employes', 'id_employe');
 $bus = Manager::Count('bus', 'id_bus');
 $garages = Manager::Count('garages', 'id_garage');
+
+$sql = "SELECT * FROM slider ORDER BY id DESC LIMIT 1";
+$slider = Manager::getSingleRecords($sql);
+$target="";
+if ($_SERVER["SERVER_NAME"] == 'localhost') {
+    $target = "http://localhost/dromadaire/";
+} else {
+    $target = "https://sonef.net/admin/";
+}
 ob_start();
 ?>
 
 <!-- Hero Section Begin -->
 <section class="hero-section">
     <div class="hero-items owl-carousel">
-        <div class="single-hero-item set-bg" data-setbg="public/img/banniere/6.jpg">
+        <div class="single-hero-item set-bg" data-setbg="<?=$target.$slider['img1']?>">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
@@ -44,7 +53,7 @@ ob_start();
                 </div>
             </div>
         </div>
-        <div class="single-hero-item set-bg" data-setbg="public/img/banniere/8.jpeg">
+        <div class="single-hero-item set-bg" data-setbg="<?=$target.$slider['img2']?>">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
@@ -78,7 +87,7 @@ ob_start();
                 </div>
             </div>
         </div>
-        <div class="single-hero-item set-bg" data-setbg="public/img/banniere/3.jpg">
+        <div class="single-hero-item set-bg" data-setbg="<?=$target.$slider['img3']?>">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
@@ -116,13 +125,13 @@ ob_start();
     <div class="thumbnail-pic">
         <div class="thumbs owl-carousel">
             <div class="item">
-                <img src="public/img/banniere/6.jpg" alt="banière sonef">
+                <img src="<?=$target.$slider['img1']?>" alt="banière sonef">
             </div>
             <div class="item">
-                <img src="public/img/banniere/8.jpeg" alt="banière sonef">
+                <img src="<?=$target.$slider['img2']?>" alt="banière sonef">
             </div>
             <div class="item">
-                <img src="public/img/banniere/3.jpg" alt="banière sonef">
+                <img src="<?=$target.$slider['img3']?>" alt="banière sonef">
             </div>
         </div>
     </div>
@@ -754,12 +763,7 @@ ob_start();
     <div class="container">
         <div class="top-properties-carousel owl-carousel">
             <?php
-            $target = '';
-            if ($_SERVER["SERVER_NAME"] == 'localhost') {
-                $target = "http://localhost/dromadaire/";
-            } else {
-                $target = "https://www.coronackathon.org/droma_admin/";
-            }
+           
             $data = Manager::getData("post", true)['data'];
             // die(var_dump($data));
             if (is_array($data) || is_object($data)) {
@@ -826,12 +830,7 @@ ob_start();
         <div class="row">
             <div class="agent-carousel owl-carousel">
                 <?php
-                $target = '';
-                if ($_SERVER["SERVER_NAME"] == 'localhost') {
-                    $target = "http://localhost/dromadaire/";
-                } else {
-                    $target = "http://coronackathon.org/droma_admin/";
-                }
+               
                 $data = Manager::getData("agence", true)['data'];
                 //die(var_dump($data));
                 if (is_array($data) || is_object($data)) {
