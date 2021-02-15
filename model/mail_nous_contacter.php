@@ -6,6 +6,7 @@ if (!empty($_POST)) {
 // *** A configurer par vos soins
 
 $to = "contact@sonef.net"; // Mettez l'email de réception
+$to2 = "contact@sonef.net"; // Mettez l'email de réception
 $from = $email; // Adresse email du destinataire de l'envoi, celui rattaché à votre domaine LWS.
 
 // Ne pas modifier les lignes ci-dessous
