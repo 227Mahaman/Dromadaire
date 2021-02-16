@@ -5,8 +5,8 @@ if (!empty($_GET['id'])) {
     $billet = Manager::getData("billet", "id_billet", $datas['billet'])['data'];
     $sql = "SELECT * FROM tarif WHERE vdepart=? AND vdestination=?";
     $data = Manager::getMultiplesRecords($sql, [$billet['depart'], $billet['destination']]);
-    echo($sql);
-       Manager::showError($billet);
+    // echo($sql);
+       //Manager::showError($data);
     //$tarif = Manager::getData("tarif", "id_tarif", $data['id_billet'])['data'];
 } //elseif (!empty($_GET['c'])) {
 //     $datas = Manager::getData("client", "id_client", $_GET['c'])['data'];
