@@ -64,7 +64,7 @@ if (isset($_SESSION['client_reservation'])) { //Send Mail to Client
         $_SESSION['client'] = $client;
         $email1 = "soneftstv@gmail.com";
         $email2 = "bookingsonef@gmail.com";
-        $nom = $data['nom'];
+        $nom = $data['nom']." ".$data['prenom']." (".$data['tel'].")";
         $object = "Reservation de billet";
         ob_start();
         include('mail_message_admin.php');
