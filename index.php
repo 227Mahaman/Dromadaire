@@ -72,7 +72,7 @@ if (!empty($_GET['action'])) {
                 }
             }
             include_once("model/mail.php");
-            include_once("model/mail_admin.php");
+            // include_once("model/mail_admin.php");
         }
         include_once('view/reservation_view.php');
     } elseif ($action == "reservationc") { //View Reservation notification
