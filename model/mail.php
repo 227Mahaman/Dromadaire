@@ -89,7 +89,7 @@ if (isset($_SESSION['client_reservation'])) { //Send Mail to Client
           $mail->setFrom('contact@sonef.net', 'Sonef');
           $mail->addAddress($email1, $nom);     // Add a recipient
           $mail->addAddress($email2);               // Name is optional
-          $mail->addAddress("adamoukomcheabdoulrazak@gmail.com");               // Name is optional
+          // $mail->addAddress("adamoukomcheabdoulrazak@gmail.com");               // Name is optional
           //$mail->addAddress('ellen@example.com');               // Name is optional
           //$mail->addReplyTo('contact@sonef.net', 'Sonef');//Adresse de réponse
           //ob_start();
